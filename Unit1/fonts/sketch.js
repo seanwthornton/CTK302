@@ -16,6 +16,6 @@ function draw() {
   text("howdy", width/2, height/2);
   textSize(100);
   textFont(f2);
-  text("ya", width/2, height/2+80);
+  text("ya'll", width/2, height/2+80);
 
 }
