@@ -395,7 +395,7 @@ function draw() {
 }
 
 function mouseReleased() {
-if (sound1.play()) {
+if (sound1.isPlaying()) {
   sound1.pause();
 }else{
   sound1.play();
