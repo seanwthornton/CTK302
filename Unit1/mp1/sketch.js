@@ -4,7 +4,7 @@ let song1 ;
 sound1.volume = 0.1 ;
 
 function preload() {
-    sound1 = loadSound("assets/GHOST8B.mp3");
+    sound1 = loadSound("assets/GhostHov.mp3");
     song1 = loadSound("assets/bensjazzfr.mp3");
 }
 
