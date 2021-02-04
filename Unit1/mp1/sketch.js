@@ -406,3 +406,8 @@ if (sound1.isPlaying()) {
 function mouseReleased() {
   print(mouseX + ", "+ mouseY);
 }
+
+// add these to programs that use sound, at the bottom
+function touchStarted() {
+  getAudioContext().resume();
+}
