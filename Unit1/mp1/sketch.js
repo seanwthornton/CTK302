@@ -397,7 +397,7 @@ function mouseReleased() {
 if (sound1.isPlaying()) {
   sound1.pause();
 }else{
-  sound1.loop();
+  sound1.play();
 }
 }
 
