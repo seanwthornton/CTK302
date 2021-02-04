@@ -17,5 +17,8 @@ function draw() {
   textSize(100);
   textFont(f2);
   text("ya'll", width/2, height/2+80);
+  // \n=new linebreak—and escape character (don't use spaces)
+  // \"=making quotation marks in your copy
+  // bounding box=add in two new values for height and width
 
 }
