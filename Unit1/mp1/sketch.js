@@ -3,7 +3,7 @@ let sound1 ;
 let song1 ;
 
 function preload() {
-    sound1 = loadSound("assets/GhostHov.mp3");
+    sound1 = loadSound("assets/GHOST8B.mp3");
     song1 = loadSound("assets/bensjazzfr.mp3");
 }
 
