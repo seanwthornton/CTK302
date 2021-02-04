@@ -386,20 +386,20 @@ function draw() {
     noFill();
     arc(370, 270, 50, 20, 0, 40);
 
-    // if (mouseIsPressed) {
-    //   sound1.play();
-    // }else{
-    //   sound1.pause();
-    // }
+    if (mouseIsPressed) {
+      sound1.play();
+    }else{
+      sound1.pause();
+    }
 }
 
-function mouseReleased() {
-if (sound1.isPlaying()) {
-  sound1.pause();
-}else{
-  sound1.play();
-}
-}
+// function mouseReleased() {
+// if (sound1.isPlaying()) {
+//   sound1.pause();
+// }else{
+//   sound1.play();
+// }
+// }
 
 
 function mouseReleased() {
