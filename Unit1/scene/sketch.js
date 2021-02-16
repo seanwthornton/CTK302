@@ -8,6 +8,7 @@ function draw() {
 
   //sky
   if (mouseIsPressed) {
+    //background(100, 200, 250); good sky blue
   background(255, 200, 70);
   fill(75, 0, 125);
   rect(0, 0, 720, 100);
