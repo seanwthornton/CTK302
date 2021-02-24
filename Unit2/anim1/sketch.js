@@ -20,4 +20,5 @@ function draw() {
   if (x > width) {
     x = -1000 ; //sets beginning point way off the screen
   }
+
 }
