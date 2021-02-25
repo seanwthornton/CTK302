@@ -16,12 +16,13 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(600, 400);
 
 }
 
 function draw() {
   background(100);
+
   switch (state) {
 
     case 0:
