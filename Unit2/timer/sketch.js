@@ -21,7 +21,7 @@ function draw() {
     textSize(200);
     textFont(f1);
     fill(0, 0, random (255));
-    text("1", width/2, height/2+50);
+    text("1", width/2, height/2);
     break;
 
     case 1:
@@ -34,7 +34,7 @@ function draw() {
     textSize(300);
     textFont(f1);
     fill(0, random (255), 0);
-    text("2", width/2, height/2+75);
+    text("2", width/2, height/2);
     break;
 
     case 2:
@@ -47,7 +47,7 @@ function draw() {
     textSize(400);
     textFont(f1);
     fill(random (255), 0, 0);
-    text("3", width/2, height/2+125);
+    text("3", width/2, height/2);
     break;
 
 

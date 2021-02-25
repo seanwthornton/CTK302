@@ -17,22 +17,30 @@ function preload() {
 
 function setup() {
   createCanvas(600, 400);
+  f1 = loadFont("assets/AbrahamLincoln.ttf");
+  textAlign(CENTER);
 
 }
 
 function draw() {
-  background(100);
+  background(175, 75, 185);
 
   switch (state) {
 
     case 0:
-      text("1", 100, 100);
+      textSize(48);
+      textFont(f1);
+      fill(250, 250, 255);
+      text("1", width / 2, height / 2);
       song1.play();
       state = 1;
       break;
 
     case 1:
-      text("listen to song 1", 100, 100);
+      textSize(48);
+      textFont(f1);
+      fill(250, 250, 255);
+      text("A jazzy French tune", width / 2, height / 2);
       break;
 
     case 2:
@@ -41,7 +49,10 @@ function draw() {
       break;
 
     case 3:
-      text("listen to song 2", 100, 100);
+      textSize(48);
+      textFont(f1);
+      fill(250, 250, 255);
+      text("A cute diddy", width / 2, height / 2);
       break;
 
     case 4:
@@ -50,24 +61,27 @@ function draw() {
       break;
 
     case 3:
-      text("listen to song 3", 100, 100);
+      textSize(48);
+      textFont(f1);
+      fill(250, 250, 255);
+      text("A ukulele melody", width / 2, height / 2);
       break;
-    }
   }
+}
 
-  function mouseReleased() {
-    song1.pause();
-    song2.pause();
-    song3.pause();
+function mouseReleased() {
+  song1.pause();
+  song2.pause();
+  song3.pause();
 
-    state++;
-    if (state > 5) state = 0;
-
-
-  }
+  state++;
+  if (state > 5) state = 0;
 
 
-  // add these to programs that use sound, at the bottom
-  function touchStarted() {
-    getAudioContext().resume();
-  }
+}
+
+
+// add these to programs that use sound, at the bottom
+function touchStarted() {
+  getAudioContext().resume();
+}
