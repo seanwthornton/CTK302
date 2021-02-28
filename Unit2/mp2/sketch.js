@@ -1,4 +1,4 @@
-let state = 0;
+let state = -1;
 let timer = 0;
 
 let mic;
@@ -85,12 +85,23 @@ function draw() {
 
   switch (state) {
 
+    case -1:
+      background(56, 101, 106);
+      fill('white');
+      textSize(48);
+      textFont(f2);
+      text("Click to start the fun!", width / 2, height / 2-150);
+      // if (vol > .10) { // if the volume is LOUD?
+      //   state = 1 ; // do something
+      // }
+      break;
+
     case 0:
       background(40, 16, 32);
       fill('white');
       textSize(36);
       textFont(f1);
-      text("Say 'Enter' to\nbegin the adventure!\n\nYou have limited\ntime to read each page!", width / 2, height / 2-150);
+      text("Say 'Enter' to\nbegin the adventure!\nBut read quickly.", width / 2, height / 2-150);
       if (vol > .10) { // if the volume is LOUD?
         state = 1 ; // do something
       }
@@ -120,7 +131,7 @@ function draw() {
       background('white');
       image(Sep2, width / 2, height / 2);
       timer++;
-      if (timer > 5 * 60){
+      if (timer > 7 * 60){
         state = 4;
         timer = 0;
       }
@@ -140,7 +151,7 @@ function draw() {
       background('white');
       image(Sep4, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 6;
         timer = 0;
       }
@@ -150,7 +161,7 @@ function draw() {
       background('white');
       image(Sep5, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 7;
         timer = 0;
       }
@@ -160,7 +171,7 @@ function draw() {
       background('white');
       image(Sep6, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 8;
         timer = 0;
       }
@@ -170,7 +181,7 @@ function draw() {
       background('white');
       image(Sep7, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 9;
         timer = 0;
       }
@@ -180,7 +191,7 @@ function draw() {
       background('white');
       image(Sep8, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 10;
         timer = 0;
       }
@@ -190,7 +201,7 @@ function draw() {
       background('white');
       image(Sep9, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 11;
         timer = 0;
       }
@@ -200,7 +211,7 @@ function draw() {
       background('white');
       image(Sep10, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 12;
         timer = 0;
       }
@@ -210,7 +221,7 @@ function draw() {
       background('white');
       image(Sep11, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 13;
         timer = 0;
       }
@@ -220,7 +231,7 @@ function draw() {
       background('white');
       image(Sep12, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 14;
         timer = 0;
       }
@@ -230,7 +241,7 @@ function draw() {
       background('white');
       image(Sep13, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 15;
         timer = 0;
       }
@@ -240,7 +251,7 @@ function draw() {
       background('white');
       image(Sep14, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 16;
         timer = 0;
       }
@@ -250,7 +261,7 @@ function draw() {
       background('white');
       image(Sep15, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 17;
         timer = 0;
       }
@@ -260,7 +271,7 @@ function draw() {
       background('white');
       image(Sep16, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 18;
         timer = 0;
       }
@@ -270,7 +281,7 @@ function draw() {
       background('white');
       image(Sep17, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 19;
         timer = 0;
       }
@@ -280,7 +291,7 @@ function draw() {
       background('white');
       image(Sep18, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 20;
         timer = 0;
       }
@@ -290,7 +301,7 @@ function draw() {
       background('white');
       image(Sep19, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 21;
         timer = 0;
       }
@@ -300,7 +311,7 @@ function draw() {
       background('white');
       image(Sep20, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 22;
         timer = 0;
       }
@@ -310,7 +321,7 @@ function draw() {
       background('white');
       image(Sep21, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 23;
         timer = 0;
       }
@@ -320,7 +331,7 @@ function draw() {
       background('white');
       image(Sep22, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 24;
         timer = 0;
       }
@@ -330,7 +341,7 @@ function draw() {
       background('white');
       image(Sep23, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 25;
         timer = 0;
       }
@@ -340,7 +351,7 @@ function draw() {
       background('white');
       image(Sep24, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 26;
         timer = 0;
       }
@@ -350,7 +361,7 @@ function draw() {
       background('white');
       image(Sep25, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 27;
         timer = 0;
       }
@@ -360,7 +371,7 @@ function draw() {
       background('white');
       image(Sep26, width / 2, height / 2);
       timer++;
-      if (timer > 6 * 60){
+      if (timer > 7 * 60){
         state = 28;
         timer = 0;
       }
