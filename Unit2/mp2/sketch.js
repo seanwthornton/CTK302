@@ -38,8 +38,8 @@ let Seppage28;
 
 function setup() {
   createCanvas(612, 792);
-  f1 = loadFont("assets/LTCPabOldIta");
-  f2 = loadFont("assets/LTCPabOldSwa");
+  f1 = loadFont("assets/LTCPabOldIta.ttf");
+  f2 = loadFont("assets/LTCPabOldSwa.ttf");
   textAlign(CENTER);
 
   Sepcover = loadImage("assets/Sepcover.jpg");
