@@ -60,7 +60,7 @@ function draw() {
       state = 5;
       break;
 
-    case 3:
+    case 5:
       textSize(48);
       textFont(f1);
       fill(250, 250, 255);

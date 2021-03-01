@@ -1,5 +1,6 @@
 let state = -1;
 let timer = 0;
+let song1, song2;
 
 let mic;
 let vol;
@@ -35,11 +36,19 @@ let Seppage26;
 let Seppage27;
 let Seppage28;
 
+function preload() {
+  song1 = loadSound("assets/magic.mp3");
+  song2 = loadSound("assets/benshey.mp3");
+
+  song1.loop();
+  song1.pause();
+  song2.loop();
+  song2.pause();
+}
 
 function setup() {
   createCanvas(612, 792);
-  f1 = loadFont("assets/LTCPabOldIta.ttf");
-  f2 = loadFont("assets/LTCPabOldSwa.ttf");
+  f1 = loadFont("assets/biblio.ttf");
   textAlign(CENTER);
 
   Sepcover = loadImage("assets/Sepcover.jpg");
@@ -88,9 +97,14 @@ function draw() {
     case -1:
       background(56, 101, 106);
       fill('white');
-      textSize(48);
-      textFont(f2);
-      text("Click to start the fun!", width / 2, height / 2-150);
+      textSize(100);
+      textFont(f1);
+      text("Click", width / 2, height / 2-150);
+      textSize(60);
+      textFont(f1);
+      text("to start the fun!", width / 2, height / 2);
+      song1.play();
+
       // if (vol > .10) { // if the volume is LOUD?
       //   state = 1 ; // do something
       // }
@@ -99,9 +113,11 @@ function draw() {
     case 0:
       background(40, 16, 32);
       fill('white');
-      textSize(36);
+      textSize(60);
       textFont(f1);
-      text("Say 'Enter' to\nbegin the adventure!\nBut read quickly.", width / 2, height / 2-150);
+      text("Holler to\nbegin the adventure!", width / 2, height / 2-150);
+      textSize(36);
+      text("But read quickly.", width / 2, height / 2);
       if (vol > .10) { // if the volume is LOUD?
         state = 1 ; // do something
       }
@@ -110,6 +126,8 @@ function draw() {
     case 1:
       background('white');
       image(Sepcover, width / 2, height / 2);
+      song2.play();
+
       timer++;
       if (timer > 5 * 60){
         state = 2;
@@ -120,8 +138,12 @@ function draw() {
     case 2:
       background('white');
       image(Sep1, width / 2, height / 2);
+      fill('black');
+      textSize(18);
+      textFont(f1);
+      text("1", width/2, 786);
       timer++;
-      if (timer > 5 * 60){
+      if (timer > 7 * 60){
         state = 3;
         timer = 0;
       }
@@ -130,6 +152,9 @@ function draw() {
     case 3:
       background('white');
       image(Sep2, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("2", width/2, 786);
       timer++;
       if (timer > 7 * 60){
         state = 4;
@@ -140,8 +165,11 @@ function draw() {
     case 4:
       background('white');
       image(Sep3, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("3", width/2, 786);
       timer++;
-      if (timer > 5 * 60){
+      if (timer > 10 * 60){
         state = 5;
         timer = 0;
       }
@@ -150,8 +178,11 @@ function draw() {
     case 5:
       background('white');
       image(Sep4, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("4", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 6;
         timer = 0;
       }
@@ -160,8 +191,11 @@ function draw() {
     case 6:
       background('white');
       image(Sep5, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("5", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 12 * 60){
         state = 7;
         timer = 0;
       }
@@ -170,8 +204,11 @@ function draw() {
     case 7:
       background('white');
       image(Sep6, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("6", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 8;
         timer = 0;
       }
@@ -180,8 +217,11 @@ function draw() {
     case 8:
       background('white');
       image(Sep7, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("7", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 9;
         timer = 0;
       }
@@ -190,8 +230,11 @@ function draw() {
     case 9:
       background('white');
       image(Sep8, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("8", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 10;
         timer = 0;
       }
@@ -200,8 +243,11 @@ function draw() {
     case 10:
       background('white');
       image(Sep9, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("9", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 11;
         timer = 0;
       }
@@ -210,8 +256,11 @@ function draw() {
     case 11:
       background('white');
       image(Sep10, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("10", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 12;
         timer = 0;
       }
@@ -220,8 +269,11 @@ function draw() {
     case 12:
       background('white');
       image(Sep11, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("11", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 13;
         timer = 0;
       }
@@ -230,8 +282,11 @@ function draw() {
     case 13:
       background('white');
       image(Sep12, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("12", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 14;
         timer = 0;
       }
@@ -240,8 +295,11 @@ function draw() {
     case 14:
       background('white');
       image(Sep13, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("13", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 15;
         timer = 0;
       }
@@ -250,8 +308,11 @@ function draw() {
     case 15:
       background('white');
       image(Sep14, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("14", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 16;
         timer = 0;
       }
@@ -260,8 +321,11 @@ function draw() {
     case 16:
       background('white');
       image(Sep15, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("15", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 17;
         timer = 0;
       }
@@ -270,8 +334,11 @@ function draw() {
     case 17:
       background('white');
       image(Sep16, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("16", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 18;
         timer = 0;
       }
@@ -280,8 +347,11 @@ function draw() {
     case 18:
       background('white');
       image(Sep17, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("17", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 19;
         timer = 0;
       }
@@ -290,8 +360,11 @@ function draw() {
     case 19:
       background('white');
       image(Sep18, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("18", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 20;
         timer = 0;
       }
@@ -300,8 +373,11 @@ function draw() {
     case 20:
       background('white');
       image(Sep19, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("19", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 21;
         timer = 0;
       }
@@ -310,8 +386,11 @@ function draw() {
     case 21:
       background('white');
       image(Sep20, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("20", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 22;
         timer = 0;
       }
@@ -320,8 +399,11 @@ function draw() {
     case 22:
       background('white');
       image(Sep21, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("21", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 23;
         timer = 0;
       }
@@ -330,8 +412,11 @@ function draw() {
     case 23:
       background('white');
       image(Sep22, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("22", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 24;
         timer = 0;
       }
@@ -340,8 +425,11 @@ function draw() {
     case 24:
       background('white');
       image(Sep23, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("23", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 25;
         timer = 0;
       }
@@ -350,8 +438,11 @@ function draw() {
     case 25:
       background('white');
       image(Sep24, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("24", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 26;
         timer = 0;
       }
@@ -360,8 +451,11 @@ function draw() {
     case 26:
       background('white');
       image(Sep25, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("25", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 27;
         timer = 0;
       }
@@ -370,8 +464,11 @@ function draw() {
     case 27:
       background('white');
       image(Sep26, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("26", width/2, 786);
       timer++;
-      if (timer > 7 * 60){
+      if (timer > 10 * 60){
         state = 28;
         timer = 0;
       }
@@ -380,6 +477,9 @@ function draw() {
     case 28:
       background('white');
       image(Sep27, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("27", width/2, 786);
       timer++;
       if (timer > 5 * 60){
         state = 29;
@@ -390,6 +490,9 @@ function draw() {
     case 29:
       background('white');
       image(Sep28, width / 2, height / 2);
+      textSize(18);
+      textFont(f1);
+      text("28", width/2, 786);
       timer++;
       if (timer > 5 * 60){
         state = 30;
@@ -400,8 +503,12 @@ function draw() {
     case 30:
       background('white');
       image(Sepbc, width / 2, height / 2);
+      fill('white');
+      textSize(48);
+      textFont(f1);
+      text("TIME FREEZE\n3.01.21 at 7 p.m.", width/2, height/2-150);
       timer++;
-      if (timer > 3 * 60){
+      if (timer > 8 * 60){
         state = 0;
         timer = 0;
       }
@@ -411,10 +518,14 @@ function draw() {
 }
 
 function mouseReleased() {
-  state = state + 1; //or state++
-  if (state > 30) {
+  song1.pause();
+  song2.pause();
+
+  state = state + 1; 
+  if (state > 30)
     state = 0;
-  }
+
+
 }
 function touchStarted() {
   getAudioContext().resume();
