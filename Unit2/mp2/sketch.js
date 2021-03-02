@@ -1,6 +1,6 @@
 let state = -1;
 let timer = 0;
-let song1, song2;
+let wand, song2;
 
 let mic;
 let vol;
@@ -37,11 +37,10 @@ let Seppage27;
 let Seppage28;
 
 function preload() {
-  song1 = loadSound("assets/magic.mp3");
+  wand = loadSound("assets/magic.mp3");
   song2 = loadSound("assets/benshey.mp3");
 
-  song1.loop();
-  song1.pause();
+  // wand.pause();
   song2.loop();
   song2.pause();
 }
@@ -103,11 +102,7 @@ function draw() {
       textSize(60);
       textFont(f1);
       text("to start the fun!", width / 2, height / 2);
-      song1.play();
 
-      // if (vol > .10) { // if the volume is LOUD?
-      //   state = 1 ; // do something
-      // }
       break;
 
     case 0:
@@ -115,18 +110,19 @@ function draw() {
       fill('white');
       textSize(60);
       textFont(f1);
-      text("Holler to\nbegin the adventure!", width / 2, height / 2-150);
+      text("Make some noise\nto begin the adventure!", width / 2, height / 2-150);
       textSize(36);
       text("But read quickly.", width / 2, height / 2);
+
       if (vol > .10) { // if the volume is LOUD?
-        state = 1 ; // do something
+        state = 1 ;
+        song2.play();// do something
       }
       break;
 
     case 1:
       background('white');
       image(Sepcover, width / 2, height / 2);
-      song2.play();
 
       timer++;
       if (timer > 5 * 60){
@@ -195,7 +191,7 @@ function draw() {
       textFont(f1);
       text("5", width/2, 786);
       timer++;
-      if (timer > 12 * 60){
+      if (timer > 14 * 60){
         state = 7;
         timer = 0;
       }
@@ -494,7 +490,7 @@ function draw() {
       textFont(f1);
       text("28", width/2, 786);
       timer++;
-      if (timer > 5 * 60){
+      if (timer > 8 * 60){
         state = 30;
         timer = 0;
       }
@@ -506,7 +502,7 @@ function draw() {
       fill('white');
       textSize(48);
       textFont(f1);
-      text("TIME FREEZE\n3.01.21 at 7 p.m.", width/2, height/2-150);
+      text("TIME FREEZE\n3.02.21 at 7 p.m.", width/2, height/2-150);
       timer++;
       if (timer > 8 * 60){
         state = 0;
@@ -517,14 +513,16 @@ function draw() {
   }
 }
 
+
 function mouseReleased() {
-  song1.pause();
-  song2.pause();
 
-  state = state + 1; 
-  if (state > 30)
-    state = 0;
+  if (state==-1) wand.play();
 
+  state = state + 1;
+  if (state > 30){
+    state = -1;
+    song2.stop();
+}
 
 }
 function touchStarted() {
