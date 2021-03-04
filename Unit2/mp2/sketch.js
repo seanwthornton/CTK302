@@ -1,3 +1,5 @@
+// TIME FREEZE 3.02.21 at 10 a.m.
+
 let state = -1;
 let timer = 0;
 let wand, song2;
