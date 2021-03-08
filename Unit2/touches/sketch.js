@@ -1,33 +1,58 @@
-let numberOfTouches ;
+let numberOfTouches;
+
+let STnorm;
+let STspace;
+let STsupe;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
+
+  f1 = loadFont("assets/CCMonsterMash.ttf");
+  textAlign(CENTER);
 }
 
 function draw() {
   clear();
   numberOfTouches = touches.length;
-  text(numberOfTouches + ' touches', 5, 10);
+  fill('white');
+  textSize(18);
+  text(numberOfTouches + ' touches', width / 2, height / 2-50);
 
-  switch(numberOfTouches) {
+  switch (numberOfTouches) {
     case 0:
-      text("no one is touching the screen", 5, 22) ;
-      break ;
+    background(100, 150, 170);
+    fill('white');
+    textSize(32);
+      textFont(f1);
+      text("Hey, touch the screen\nand see me cartooned!", width / 2, height / 2);
+      break;
 
-      case 1:
-       text("it's kind of lonely here", 5, 22) ;
+    case 1:
+      STnorm = loadImage("assets/STnorm.jpg", width / 2, height / 2);
+      fill('white');
+      textSize(32);
+      textFont(f1);
+      text("Mild-mannered Sean", width / 2, height / 2 + 100);
       // put a picture here
-      break ;
+      break;
 
-      case 2:
-      text("two fingers are touching the screen", 5, 22) ;
-            // put a picture here
-      break ;
+    case 2:
+      STspace = loadImage("assets/STspace.jpg", width / 2, height / 2);
+      fill('white');
+      textSize(32);
+      textFont(f1);
+      text("Space cadet Sean", width / 2, height / 2 + 100);
+      // put a picture here
+      break;
 
-      case 3:
-     text("three are touching the screen", 5, 22) ;
-            // put a picture here
-      break ;
+    case 3:
+      STsupe = loadImage("assets/STsupe.jpg", width / 2, height / 2);
+      fill('white');
+      textSize(32);
+      textFont(f1);
+      text("Super Sean!", width / 2, height / 2 + 100);
+      // put a picture here
+      break;
 
 
   }
