@@ -6,7 +6,6 @@ let STsupe;
 
 function setup() {
   createCanvas(400, 400);
-
   f1 = loadFont("assets/CCMonsterMash.ttf");
   textAlign(CENTER);
 }
@@ -28,7 +27,7 @@ function draw() {
       break;
 
     case 1:
-      STnorm = loadImage("assets/STnorm.jpg", width / 2, height / 2);
+      STnorm = loadImage("assets/STnorm.png", width / 2, height / 2);
       // fill('white');
       textSize(32);
       textFont(f1);
@@ -37,7 +36,7 @@ function draw() {
       break;
 
     case 2:
-      STspace = loadImage("assets/STspace.jpg", width / 2, height / 2);
+      STspace = loadImage("assets/STspace.png", width / 2, height / 2);
       // fill('white');
       textSize(32);
       textFont(f1);
@@ -46,7 +45,7 @@ function draw() {
       break;
 
     case 3:
-      STsupe = loadImage("assets/STsupe.jpg", width / 2, height / 2);
+      STsupe = loadImage("assets/STsupe.png", width / 2, height / 2);
       // fill('white');
       textSize(32);
       textFont(f1);
