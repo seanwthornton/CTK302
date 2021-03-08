@@ -48,7 +48,7 @@ function draw() {
 //&& = and , || = or
 function mouseReleased(){
 
-  if ((mouseX > width/2-50)&&(mouseX < width/2+50)&&(mouseY > height-150)&&(mouseY < height+100)) {
+  if ((mouseX > width/2-50)&&(mouseX < width/2+50)&&(mouseY > height-150)&&(mouseY < height-50)) {
 
   state = state + 1 ;
   if(state > 2){
