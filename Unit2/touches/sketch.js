@@ -5,7 +5,7 @@ let STspace;
 let STsupe;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(400, 400);
 
   f1 = loadFont("assets/CCMonsterMash.ttf");
   textAlign(CENTER);
@@ -16,13 +16,13 @@ function draw() {
   numberOfTouches = touches.length;
   fill('white');
   textSize(18);
-  text(numberOfTouches + ' touches', width / 2, height / 2-50);
+  text(numberOfTouches + ' touches', width / 2, height / 2 - 50);
 
   switch (numberOfTouches) {
     case 0:
-    background(100, 150, 170);
-    fill('white');
-    textSize(32);
+      background(100, 150, 170);
+      fill('white');
+      textSize(32);
       textFont(f1);
       text("Hey, touch the screen\nand see me cartooned!", width / 2, height / 2);
       break;
