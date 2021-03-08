@@ -31,7 +31,7 @@ function draw() {
       textSize(32);
       textFont(f1);
       text("Mild-mannered Sean", width / 2, height / 2 + 100);
-      STnorm = loadImage("assets/STnorm.png");
+      STnorm = loadImage("assets/STnorm75.png");
       break;
 
     case 2:
@@ -39,7 +39,7 @@ function draw() {
       textSize(32);
       textFont(f1);
       text("Space cadet Sean", width / 2, height / 2 + 100);
-      STspace = loadImage("assets/STspace.png");
+      STspace = loadImage("assets/STspace75.png");
       break;
 
     case 3:
@@ -47,7 +47,7 @@ function draw() {
       textSize(32);
       textFont(f1);
       text("Super Sean!", width / 2, height / 2 + 100);
-      STsupe = loadImage("assets/STsupe.png");
+      STsupe = loadImage("assets/STsupe75.png");
       break;
 
 
