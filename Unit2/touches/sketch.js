@@ -15,7 +15,7 @@ function draw() {
   numberOfTouches = touches.length;
   // fill('white');
   textSize(18);
-  text(numberOfTouches + ' touches', width / 2, height / 2 - 50);
+  text(numberOfTouches + ' touches', width / 2, height / 2 - 100);
 
   switch (numberOfTouches) {
     case 0:
@@ -27,7 +27,7 @@ function draw() {
       break;
 
     case 1:
-      STnorm = loadImage("assets/STnorm.png", width / 2, height / 2);
+      STnorm = loadImage("assets/STnorm.png");
       // fill('white');
       textSize(32);
       textFont(f1);
@@ -36,7 +36,7 @@ function draw() {
       break;
 
     case 2:
-      STspace = loadImage("assets/STspace.png", width / 2, height / 2);
+      STspace = loadImage("assets/STspace.png");
       // fill('white');
       textSize(32);
       textFont(f1);
@@ -45,7 +45,7 @@ function draw() {
       break;
 
     case 3:
-      STsupe = loadImage("assets/STsupe.png", width / 2, height / 2);
+      STsupe = loadImage("assets/STsupe.png");
       // fill('white');
       textSize(32);
       textFont(f1);
