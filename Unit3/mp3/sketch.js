@@ -2,23 +2,30 @@ let balls = [];
 let frogPos;
 let state = 0;
 let timer = 0;
-let maxCars = 5;
+let maxBalls = 5;
 let maxTimer = 10;
 let BallHog1;
 let BallHog2;
 let BallHog3;
 let BallHog4;
-let open, win, lose, ballhog;
+let ballhog;
+let oink;
 
 function preload() {
-  open = loadSound("assets/moose.mp3");
-  win = loadSound("assets/bensfunday.mp3");
-  lose = loadSound("assets/benssadday.mp3");
+  // open = loadSound("assets/moose.mp3");
+  // win = loadSound("assets/bensfunday.mp3");
+  // lose = loadSound("assets/benssadday.mp3");
   ballhog = loadSound("assets/benscountry.mp3");
+  oink = loadSound("assets/oink.mp3");
 
-  // wand.pause();
-  song1.loop();
-  song1.pause();
+  // open.loop();
+  // open.pause();
+  // win.loop();
+  // win.pause();
+  // lose.loop();
+  // lose.pause();
+  ballhog.loop();
+  ballhog.pause();
 }
 
 function setup() {
@@ -34,7 +41,7 @@ function setup() {
 
   // Spawn an object
 
-  for (let i = 0; i < maxCars; i++) {
+  for (let i = 0; i < maxBalls; i++) {
     balls.push(new Ball());
   }
 
@@ -45,11 +52,7 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
-      // background('black');
       image(BallHog1, width / 2, height / 2);
-      open.play();
-      // fill('white');
-      // text("Wanna be the\nBALL HOG? Click my snout to play!", width/2, height/2); //make an image
       break;
     case 1:
       game();
@@ -57,24 +60,15 @@ function draw() {
       if (timer > maxTimer * 60) {
         timer = 0;
         state = 3;
-        ballhog.play();
       }
       break;
 
     case 2: //win
-      // background('green');
       image(BallHog2, width / 2, height / 2);
-      win.play();
-      // fill('white');
-      // text("What a BALL HOG! Click to play again.", 100, 100); //make an image
       break;
 
     case 3: //lose
-      // background('red');
       image(BallHog3, width / 2, height / 2);
-      lose.play();
-      // fill('white');
-      // text("You're no ball hog! Click to play again.", 100, 100); //make an image
       break;
 
   }
@@ -96,18 +90,26 @@ function mouseReleased() {
       state = 0;
       break;
   }
+  ballhog.play();
+
+  // if (state == -1) wand.play();
+
+  // state = state + 1;
+  // if (state > 3) {
+  //   state = 0;
+  //   ballhog.stop();
+  // }
 }
 
 function resetGame() {
   timer = 0;
   balls = [];
-  for (let i = 0; i < maxCars; i++) {
+  for (let i = 0; i < maxBalls; i++) {
     balls.push(new Ball());
   }
 }
 
 function game() {
-  // background(30, 130, 50);
   image(BallHog4, width / 2, height / 2);
   // do some actions on the object
   for (let i = 0; i < balls.length; i++) {
@@ -115,6 +117,8 @@ function game() {
     balls[i].move();
     if (balls[i].pos.dist(frogPos) < 50) {
       balls.splice(i, 1);
+
+      oink.play() ;
     }
   }
 
@@ -133,14 +137,7 @@ function game() {
   rect(frogPos.x - 6, frogPos.y - 70, 12, 20)
   ellipse(frogPos.x, frogPos.y - 45, 40, 40); //head
   ellipse(frogPos.x, frogPos.y, 60, 80); //body
-  strokeWeight(5);
-  noFill();
-  arc(325, 350, 40, 120, 90, -HALF_PI);
 }
-
-
-
-
 
 function checkForKeys() {
   if (keyIsDown(LEFT_ARROW)) frogPos.x -= 5;
@@ -154,15 +151,6 @@ function checkForKeys() {
   // if (frogPos.y < width) frogPos.y = 0 ;
 } //its own function, don't put in another function
 
-
-
-
-
-
-
-
-
-// Car class
 class Ball {
 
   // constructor and attributes
@@ -178,8 +166,6 @@ class Ball {
   display() { //decide what your objects are ... shape, images, text
     fill(this.col);
     ellipse(this.pos.x, this.pos.y, 25, 25); //change this for final!
-    // textSize(this.width) ;
-    // text("WOOHOO", this.pos.x, this.pos.y);
   }
 
   move() {
