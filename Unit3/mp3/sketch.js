@@ -43,10 +43,10 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
+      ballhog.play();
       image(BallHog1, width / 2, height / 2);
       break;
     case 1:
-      ballhog.play();
       game();
       timer++;
       if (timer > maxTimer * 60) {
@@ -67,7 +67,6 @@ function draw() {
 }
 
 function mouseReleased() {
-    ballhog.pause();
   switch (state) {
     case 0:
       state = 1;
@@ -76,11 +75,13 @@ function mouseReleased() {
     case 2: //they won, and they clicked to start again
       resetGame();
       state = 0;
+      ballhog.pause();
       break;
 
     case 3: //they lost, and they clicked to start again
       resetGame();
       state = 0;
+      ballhog.pause();
       break;
   }
 
@@ -109,7 +110,7 @@ function game() {
     if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
 
-      oink.play() ;
+      oink.play();
     }
   }
 
