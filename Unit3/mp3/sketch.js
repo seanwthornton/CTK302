@@ -37,7 +37,7 @@ function setup() {
   }
 
   frogPos = createVector(width / 2, height - 100);
-
+  ballhog.play();
 }
 
 function draw() {
@@ -47,7 +47,6 @@ function draw() {
       image(BallHog1, width / 2, height / 2);
       break;
     case 1:
-      ballhog.loop(); 
       game();
       timer++;
       if (timer > maxTimer * 60) {
@@ -70,6 +69,7 @@ function draw() {
 function mouseReleased() {
   switch (state) {
     case 0:
+          oink.play();
       state = 1;
       break;
 
@@ -84,7 +84,6 @@ function mouseReleased() {
       break;
   }
 
-    ballhog.pause();
 
 }
 
