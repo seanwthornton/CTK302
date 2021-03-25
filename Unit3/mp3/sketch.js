@@ -43,7 +43,7 @@ function setup() {
 function draw() {
   switch (state) {
     case 0:
-      ballhog.play();
+
       image(BallHog1, width / 2, height / 2);
       break;
     case 1:
@@ -82,6 +82,7 @@ function mouseReleased() {
       resetGame();
       state = 0;
       ballhog.pause();
+
       break;
   }
 
@@ -94,6 +95,7 @@ function mouseReleased() {
 }
 
 function resetGame() {
+  ballhog.play();
   timer = 0;
   cars = [];
   for (let i = 0; i < maxCars; i++) {
