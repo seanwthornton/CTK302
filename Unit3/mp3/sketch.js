@@ -47,7 +47,7 @@ function draw() {
       image(BallHog1, width / 2, height / 2);
       break;
     case 1:
-      ballhog.play(); 
+      ballhog.loop(); 
       game();
       timer++;
       if (timer > maxTimer * 60) {
