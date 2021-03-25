@@ -41,12 +41,13 @@ function setup() {
 }
 
 function draw() {
+
   switch (state) {
     case 0:
-
       image(BallHog1, width / 2, height / 2);
       break;
     case 1:
+      ballhog.play(); 
       game();
       timer++;
       if (timer > maxTimer * 60) {
@@ -75,27 +76,19 @@ function mouseReleased() {
     case 2: //they won, and they clicked to start again
       resetGame();
       state = 0;
-      ballhog.pause();
       break;
 
     case 3: //they lost, and they clicked to start again
       resetGame();
       state = 0;
-      ballhog.pause();
-
       break;
   }
 
+    ballhog.pause();
 
-  // state = state + 1;
-  // if (state > 3) {
-  //   state = 0;
-  //   ballhog.stop();
-  // }
 }
 
 function resetGame() {
-  ballhog.play();
   timer = 0;
   cars = [];
   for (let i = 0; i < maxCars; i++) {
