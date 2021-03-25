@@ -10,10 +10,14 @@ let BallHog3;
 let BallHog4;
 let ballhog;
 let oink;
+let pigwin;
+let piglose;
 
 function preload() {
   ballhog = loadSound("assets/benscountry.mp3");
   oink = loadSound("assets/oink.mp3");
+  pigwin = loadSound("assets/pigswin.mp3");
+  piglose = loadSound("assets/Pigpissd.mp3");
 
   ballhog.loop();
   ballhog.pause();
@@ -37,7 +41,7 @@ function setup() {
   }
 
   frogPos = createVector(width / 2, height - 100);
-  // ballhog.play();
+  ballhog.play();
 }
 
 function draw() {
@@ -69,17 +73,19 @@ function draw() {
 function mouseReleased() {
   switch (state) {
     case 0:
-          oink.play();
+      oink.play();
       state = 1;
       break;
 
     case 2: //they won, and they clicked to start again
       resetGame();
+      pigwin.play();
       state = 0;
       break;
 
     case 3: //they lost, and they clicked to start again
       resetGame();
+      piglose.play();
       state = 0;
       break;
   }
