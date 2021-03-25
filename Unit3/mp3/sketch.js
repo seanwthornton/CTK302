@@ -1,8 +1,8 @@
-let balls = [];
+let cars = [];
 let frogPos;
 let state = 0;
 let timer = 0;
-let maxBalls = 5;
+let maxCars = 5;
 let maxTimer = 10;
 let BallHog1;
 let BallHog2;
@@ -12,18 +12,9 @@ let ballhog;
 let oink;
 
 function preload() {
-  // open = loadSound("assets/moose.mp3");
-  // win = loadSound("assets/bensfunday.mp3");
-  // lose = loadSound("assets/benssadday.mp3");
   ballhog = loadSound("assets/benscountry.mp3");
   oink = loadSound("assets/oink.mp3");
 
-  // open.loop();
-  // open.pause();
-  // win.loop();
-  // win.pause();
-  // lose.loop();
-  // lose.pause();
   ballhog.loop();
   ballhog.pause();
 }
@@ -41,8 +32,8 @@ function setup() {
 
   // Spawn an object
 
-  for (let i = 0; i < maxBalls; i++) {
-    balls.push(new Ball());
+  for (let i = 0; i < maxCars; i++) {
+    cars.push(new Car());
   }
 
   frogPos = createVector(width / 2, height - 100);
@@ -55,6 +46,7 @@ function draw() {
       image(BallHog1, width / 2, height / 2);
       break;
     case 1:
+      ballhog.play();
       game();
       timer++;
       if (timer > maxTimer * 60) {
@@ -75,6 +67,7 @@ function draw() {
 }
 
 function mouseReleased() {
+    ballhog.pause();
   switch (state) {
     case 0:
       state = 1;
@@ -90,9 +83,7 @@ function mouseReleased() {
       state = 0;
       break;
   }
-  ballhog.play();
 
-  // if (state == -1) wand.play();
 
   // state = state + 1;
   // if (state > 3) {
@@ -103,26 +94,26 @@ function mouseReleased() {
 
 function resetGame() {
   timer = 0;
-  balls = [];
-  for (let i = 0; i < maxBalls; i++) {
-    balls.push(new Ball());
+  cars = [];
+  for (let i = 0; i < maxCars; i++) {
+    cars.push(new Car());
   }
 }
 
 function game() {
   image(BallHog4, width / 2, height / 2);
   // do some actions on the object
-  for (let i = 0; i < balls.length; i++) {
-    balls[i].display();
-    balls[i].move();
-    if (balls[i].pos.dist(frogPos) < 50) {
-      balls.splice(i, 1);
+  for (let i = 0; i < cars.length; i++) {
+    cars[i].display();
+    cars[i].move();
+    if (cars[i].pos.dist(frogPos) < 50) {
+      cars.splice(i, 1);
 
       oink.play() ;
     }
   }
 
-  if (balls.length == 0) {
+  if (cars.length == 0) {
     state = 2;
   }
 
@@ -151,7 +142,7 @@ function checkForKeys() {
   // if (frogPos.y < width) frogPos.y = 0 ;
 } //its own function, don't put in another function
 
-class Ball {
+class Car {
 
   // constructor and attributes
   constructor() {
