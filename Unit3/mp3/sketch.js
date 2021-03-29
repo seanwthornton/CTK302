@@ -41,6 +41,7 @@ function setup() {
   }
 
   frogPos = createVector(width / 2, height - 100);
+  
   ballhog.play();
 }
 

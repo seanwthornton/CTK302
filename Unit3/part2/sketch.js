@@ -1,8 +1,10 @@
 // let myCar1 ;
 let cars = []
+let bubbles;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(800, 800);
+  bubbles = loadImage("assets/Bubbles3.jpg");
 
   // for (let i = 0; i < 20; i++) {
   //   cars.push(new Car()); //means to spawn a new object, pushing a new car
@@ -11,8 +13,9 @@ function setup() {
 }
 
 function draw() {
-  background('grey');
-  //image 
+  background('gray');
+  //image
+  image(bubbles, width/2, height/2);
   cars.push(new Car());
 
   for (let i = 0; i < cars.length; i++) {
