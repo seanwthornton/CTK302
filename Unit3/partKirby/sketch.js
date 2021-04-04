@@ -26,9 +26,9 @@ function draw() {
     }
   }
 
-  fill('black');
-  textSize(14);
-  text(mouseX + ", "+ mouseY, 10, 390);
+  // fill('black');
+  // textSize(14);
+  // text(mouseX + ", "+ mouseY, 10, 390);
 }
 
 class Car {
@@ -36,13 +36,15 @@ class Car {
   // constructor
   constructor() {
     // attributes
-    this.pos = createVector(width / 2, height - 80);
-    this.vel = createVector(random(-.8, .8), random(-10, -5));
+    this.pos = createVector(110, 370);
+    this.vel = createVector(random(-10), random(-10));
     this.r = 0; //random(255);
     this.g = 0; //random(255);
     this.b = 0; //random(255);
-    this.a = random(200, 255);
+    this.a = random(0, 255);
   }
+
+  
 
   // methods
   display() {
