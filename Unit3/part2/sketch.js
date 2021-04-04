@@ -33,7 +33,7 @@ class Car {
   // constructor
   constructor() {
     // attributes
-    this.pos = createVector(100, 100); //spawn point
+    this.pos = createVector(width/2, height/2); //spawn point
     this.vel = createVector(random(10), random(10));
     this.r = random(255);
     this.g = random(255);
