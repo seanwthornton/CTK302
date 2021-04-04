@@ -39,7 +39,7 @@ class Car {
     this.g = random(255);
     this.b = random(255);
     this.a = random(200, 255);
-    this.s = random(5, 20);
+    this.s = random(5, 60);
   }
 
   // methods
