@@ -25,6 +25,10 @@ function draw() {
       cars.splice(i, 1);
     }
   }
+
+  fill('black');
+  textSize(14);
+  text(mouseX + ", "+ mouseY, 10, 390);
 }
 
 class Car {
@@ -34,9 +38,9 @@ class Car {
     // attributes
     this.pos = createVector(width / 2, height - 80);
     this.vel = createVector(random(-.8, .8), random(-10, -5));
-    this.r = 255; //random(255);
-    this.g = 255; //random(255);
-    this.b = 255; //random(255);
+    this.r = 0; //random(255);
+    this.g = 0; //random(255);
+    this.b = 0; //random(255);
     this.a = random(200, 255);
   }
 
