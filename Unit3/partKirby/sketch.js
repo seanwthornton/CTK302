@@ -36,20 +36,21 @@ class Car {
   // constructor
   constructor() {
     // attributes
-    this.pos = createVector(110, 370);
-    this.vel = createVector(random(-10), random(-10));
+    this.pos = createVector(200, 440);
+    this.vel = createVector(random(-.8,8), random(-10,5));
     this.r = 0; //random(255);
     this.g = 0; //random(255);
     this.b = 0; //random(255);
     this.a = random(0, 255);
+    this.s = random(10, 30);
   }
 
-  
+
 
   // methods
   display() {
     fill(this.r, this.g, this.b, this.a) ;
-    ellipse(this.pos.x, this.pos.y, 20);
+    ellipse(this.pos.x, this.pos.y, this.s);
   }
 
   move() {
