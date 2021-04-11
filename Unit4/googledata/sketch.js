@@ -1,11 +1,20 @@
-var bubbles = [];
+let bubbles = [];
+let RockBG;
+let rock ;
+
+function preload() {
+  rock = loadSound("assets/bensaction.mp3");
+
+  rock.loop();
+  rock.pause();
+}
 
 function setup() {
 
   // Tabletop stuff, for getting google spreadsheet data in.
   // let url = '1GtE3eoYVWBv9zMPoyettXzDCEv6qdNGKio_hgEh5duM'; // this is KEY of the URL from the sheet
   let url = '1inWQ_v070dJjZA4ZAsSOr57xowL28iMuhTbm3H41EYk'; // this is KEY of the URL from the sheet
-//https://docs.google.com/spreadsheets/d/1inWQ_v070dJjZA4ZAsSOr57xowL28iMuhTbm3H41EYk/edit?usp=sharing
+  //https://docs.google.com/spreadsheets/d/1inWQ_v070dJjZA4ZAsSOr57xowL28iMuhTbm3H41EYk/edit?usp=sharing
 
   let settings = {
     key: url, // The url of the published google sheet
@@ -18,10 +27,16 @@ function setup() {
 
 
   // Regular setup code we usually have
-  createCanvas(1000, 600);
+  createCanvas(1000, 1000);
+  RockBG = loadImage("assets/RockBG2.jpg");
+  imageMode(CENTER);
+  f1 = loadFont("assets/VerlagBold.otf");
+  textSize(24);
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
+
+  rock.play();
 
 }
 
@@ -41,6 +56,7 @@ function gotData(data) {
 
 function draw() {
   background('blue');
+  image(RockBG, width / 2, height / 2);
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
@@ -58,10 +74,9 @@ class Bubble {
     this.name = myName;
     this.album = myAlbum;
     this.band = myBand;
+    this.col = color(random(125,255), random(125,255), random(125,255));
     this.pos = createVector(random(width), random(height));
-    this.vel = createVector(random(5), 0);
-
-
+    this.vel = createVector(0, random(5));
   }
 
 
@@ -72,14 +87,16 @@ class Bubble {
     //   ellipse(this.pos.x, this.pos.y, 50, 50);
     // }
 
-    text(this.name, this.pos.x, this.pos.y - 20);
+    textFont(f1);
+    fill(this.col);
+    text(this.name, this.pos.x, this.pos.y - 25);
     text(this.album, this.pos.x, this.pos.y);
-    text(this.band, this.pos.x, this.pos.y + 20);
+    text(this.band, this.pos.x, this.pos.y + 25);
   }
 
-move() {
-  this.pos.add(this.vel) ;
-  if (this.pos.x > width) this.pos.x = 0 ;
-}
+  move() {
+    this.pos.add(this.vel);
+    if (this.pos.y > width) this.pos.y = 0;
+  }
 
 }
