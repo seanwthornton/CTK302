@@ -60,7 +60,7 @@ function draw() {
   noStroke();
   textFont(f1);
   fill("white");
-  text("Take the survey!\nhttps://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/edit", 20, 960);
+  text("Take the survey!\nhttps://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/edit", width / 2, height / 2);
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
