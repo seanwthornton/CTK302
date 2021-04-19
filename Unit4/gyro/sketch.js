@@ -14,7 +14,7 @@ function setup() {
 
 
 
-  spaceST = loadImage("assets/STspace.jpg");
+  spaceST = loadImage("assets/STspace.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
