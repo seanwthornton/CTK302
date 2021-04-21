@@ -28,7 +28,7 @@ function setup() {
   // Regular setup code we usually have
   createCanvas(windowWidth, windowHeight);
   Mark = loadImage("assets/YourMarkBk.png");
-  Dots = loadImage("assets/Dots.png");
+  // Dots = loadImage("assets/Dots.png");
   imageMode(CENTER);
   f1 = loadFont("assets/VerlagBold.otf");
   textSize(24);
@@ -63,7 +63,7 @@ function gotData(data) {
 
 function draw() {
   background('#d41f2d');
-  image(Dots, width / 2, height / 2);
+  // image(Dots, width / 2, height / 2);
   image(Mark, width / 2, height / 2);
   // image(avengerslogo, width/2, height/2, 900, 900);
 
