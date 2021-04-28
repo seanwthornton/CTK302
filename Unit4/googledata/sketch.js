@@ -57,10 +57,19 @@ function gotData(data) {
 function draw() {
   background('blue');
   image(RockBG, width / 2, height / 2);
+  
+  //button
+  fill(100, 255, 250);
+  stroke(250,10,120);
+  strokeWeight(15);
+  ellipse(width / 2, height / 2 + 400, 150, 150);
+
   noStroke();
   textFont(f1);
-  fill("white");
-  text("Take the survey!\nhttps://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/edit", width / 2, height / 2 + 400);
+  fill(250,10,120);
+  // textSize(30);
+  text("Take\nthe survey!", width / 2, height / 2 + 390);
+  // https://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/edit
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
@@ -103,4 +112,10 @@ class Bubble {
     if (this.pos.y > width) this.pos.y = 0;
   }
 
+}
+function mouseReleased(){
+
+  if ((mouseX > width/2-75)&&(mouseX < width/2+75)&&(mouseY > height / 2 + 325)&&(mouseY < height / 2 + 475)) {
+
+  }
 }
