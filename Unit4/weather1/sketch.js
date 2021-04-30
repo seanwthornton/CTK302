@@ -80,7 +80,7 @@ function draw() {
       ellipse(c3, 135, 180, 25);
       ellipse(c3 + 20, 145, 100, 20);
 
-      fill('white');
+      fill(235, 245, 250);
       noStroke();
       ellipse(c2 + 20, 60, 50, 40);
       ellipse(c2 + 10, 80, 160, 40);
@@ -88,6 +88,7 @@ function draw() {
       ellipse(c2 - 10, 100, 200, 45);
       ellipse(c2 + 50, 120, 120, 30);
 
+      fill('white');
       ellipse(c1 - 20, 35, 100, 100);
       ellipse(c1 - 40, 50, 200, 70);
       ellipse(c1 + 50, 40, 60, 70);
@@ -107,8 +108,8 @@ function draw() {
 
       //thermometer
       fill('red');
-      var t = map(temp, -10, 100, 10, height-10);
-      rect(width - 50, height - 10, 20, -t);
+      var t = map(temp, -10, 100, 10, height/2-20);
+      rect(width - 50, height, 20, -t);
 
       fill('white');
       textFont(f1);
@@ -122,6 +123,7 @@ function draw() {
       text("30", 1425, 850);
       text("20", 1425, 900);
       text("10", 1425, 950);
+      text("Degrees Fahrenheit", 1295, 990);
 
 
       // move the cloud's x position

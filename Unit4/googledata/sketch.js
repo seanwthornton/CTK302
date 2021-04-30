@@ -116,6 +116,7 @@ class Bubble {
 function mouseReleased(){
 
   if ((mouseX > width/2-75)&&(mouseX < width/2+75)&&(mouseY > height / 2 + 325)&&(mouseY < height / 2 + 475)) {
+    window.open('https://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/edit');
 
   }
 }
