@@ -55,9 +55,9 @@ function gotData(data) {
 
 
 function draw() {
-  background('blue');
+  // background('blue');
   image(RockBG, width / 2, height / 2);
-  
+
   //button
   fill(100, 255, 250);
   stroke(250,10,120);
