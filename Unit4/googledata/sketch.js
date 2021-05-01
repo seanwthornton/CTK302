@@ -1,6 +1,7 @@
 let bubbles = [];
 let RockBG;
 let rock ;
+let state = 0 ;
 
 function preload() {
   rock = loadSound("assets/bensaction.mp3");
@@ -55,7 +56,8 @@ function gotData(data) {
 
 
 function draw() {
-  // background('blue');
+  switch (state) {
+  case 0:
   image(RockBG, width / 2, height / 2);
 
   //button
@@ -75,6 +77,9 @@ function draw() {
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();
     bubbles[i].move();
+
+    break;
+    }
   }
 
 }
@@ -116,7 +121,7 @@ class Bubble {
 function mouseReleased(){
 
   if ((mouseX > width/2-75)&&(mouseX < width/2+75)&&(mouseY > height / 2 + 325)&&(mouseY < height / 2 + 475)) {
-    window.open('https://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/edit');
+    window.open('https://docs.google.com/forms/d/1dI8-0392usm1YkJB41MzcrtjEjxFAIiG_c1eOo8dWeg/viewform?edit_requested=true');
 
   }
 }
