@@ -1,7 +1,6 @@
 let bubbles = [];
 let RockBG;
 let rock ;
-let state = 0 ;
 
 function preload() {
   rock = loadSound("assets/bensaction.mp3");
@@ -56,8 +55,7 @@ function gotData(data) {
 
 
 function draw() {
-  switch (state) {
-  case 0:
+  // background('blue');
   image(RockBG, width / 2, height / 2);
 
   //button
@@ -77,9 +75,6 @@ function draw() {
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();
     bubbles[i].move();
-
-    break;
-    }
   }
 
 }
