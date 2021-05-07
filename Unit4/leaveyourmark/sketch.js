@@ -95,7 +95,6 @@ function draw() {
 
   fill('black');
   textSize(48);
-  f1 = loadFont("assets/VerlagBold.otf");
   text(myLocation, width / 2, 100);  // this prints out the location at the top
 
 }
