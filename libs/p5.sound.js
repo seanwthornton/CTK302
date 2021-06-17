@@ -2356,7 +2356,7 @@ soundfile = function () {
    *    speed = constrain(speed, 0.01, 4);
    *    song.rate(speed);
    *
-   *    // Draw a circle to show what is going on
+   *    // Draw a square to show what is going on
    *    stroke(0);
    *    fill(51, 100);
    *    ellipse(mouseX, 100, 48, 48);

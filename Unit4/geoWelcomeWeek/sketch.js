@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() {
-  //fence = new geoFenceCircle(40.506229, -88.990537, 0.02); //sets geofence location to cva room 17
+  //fence = new geoFencesquare(40.506229, -88.990537, 0.02); //sets geofence location to cva room 17
   createCanvas(displayWidth, displayHeight);
   num = 0;
   intervalCurrentPosition(positionPing, 5000);
@@ -29,7 +29,7 @@ function setup() {
   places.push(new Place(40.50863221414712, -88.99077591254148, "Old Union", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.50840289459472, -88.9909118880512, "Williams Hall", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.50844449497366, -88.9911676488728, "Cent 4 Perf Arts", .02), reggieImg); // new Place object, for ISU bridge over College Ave
-  places.push(new Place(40.50750741811689, -88.99029850463533, "CVA Circle", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
+  places.push(new Place(40.50750741811689, -88.99029850463533, "CVA square", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.5079598008354, -88.99148671475066, "McCormick Hall", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.50864821960959, -88.99120123764614, "Fell Hall", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.50896516728555, -88.99212919431163, "DeGarmo Hall Solar", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
@@ -45,7 +45,7 @@ function setup() {
   places.push(new Place(40.512969573012896, -88.99488587696477, "Hancock Stadium", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.509699669963155, -88.99664232253424, "Turner Hall", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.512242304908746, -88.99975734818341, "Tri Towers (Haynie)", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
-  places.push(new Place(40.50946288329222, -88.98459824742137, "Uptown Circle", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
+  places.push(new Place(40.50946288329222, -88.98459824742137, "Uptown square", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
   places.push(new Place(40.47137301266825, -88.94350239220492, "Check Location", .02, reggieImg)); // new Place object, for ISU bridge over College Ave
 
 }
@@ -82,7 +82,7 @@ function Place(lat, long, desc, radius, reggieImg) {
   this.fence = false;
   this.desc = desc;
   this.radius = radius;
-  this.fence = new geoFenceCircle(this.lat, this.long, this.radius); //sets geofence location to coordinates
+  this.fence = new geoFencesquare(this.lat, this.long, this.radius); //sets geofence location to coordinates
 
 
 

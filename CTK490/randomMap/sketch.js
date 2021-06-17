@@ -13,9 +13,8 @@ function setup() {
     // var y = random(height);
     // var r = 32;
     var square = {
-      x: random(width),
-      y: random(height),
-      r: random (12, 36)
+      x: 60,
+      y: 60,
     };
 
     var overlapping = false;
@@ -23,12 +22,21 @@ function setup() {
     for (var j = 0; j < squares.length; j++) {
       var other = squares[j];
       var d = dist(square.x, square.y, other.x, other.y);
-      if (d < square.r + other.r) {
+      if (d < square + other) {
         //they are overlapping
         overlapping = true;
         // break;
       }
     }
+    // for (var j = 0; j < squares.length; j++) {
+    //   var other = squares[j];
+    //   var d = dist(square.x, square.y, other.x, other.y);
+    //   if (d < square.r + other.r) {
+    //     //they are overlapping
+    //     overlapping = true;
+    //     // break;
+    //   }
+    // }
     if (!overlapping) {
       squares.push(square);
     }
@@ -43,7 +51,7 @@ function setup() {
   for (var i = 0; i < squares.length; i++) {
     fill(255, 0, 150, 100);
     noStroke();
-    ellipse(squares[i].x, squares[i].y, squares[i].r * 2, squares[i].r * 2);
+    ellipse(squares[i].x, squares[i].y);
 
   }
 }

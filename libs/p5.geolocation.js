@@ -224,7 +224,7 @@ p5.prototype.isLocationInPolygon = function(poly, pt){
 
 
 /**
-* Create a new geoFenceCircle
+* Create a new geoFencesquare
 *
 * Watches the users current position and checks to see if they are witihn a set radius of a specified point.
 *
@@ -232,12 +232,12 @@ p5.prototype.isLocationInPolygon = function(poly, pt){
 * @param  {float} latitude of the first point
 * @param  {float} longitude of the first point
 * @param  {float} distance from the point to trigger the insideCallback
-* @param  {function} a callback to fire when the user is inside the geoFenceCircle
-* @param  {function} a callback to fire when the user is outside the geoFenceCircle
+* @param  {function} a callback to fire when the user is inside the geoFencesquare
+* @param  {function} a callback to fire when the user is outside the geoFencesquare
 * @param  {string} units to use: 'km' or 'mi', 'mi' is default if left blank
 * @param  {object} an positionOptions object: enableHighAccuracy, maximumAge, timeout
 */
-p5.prototype.geoFenceCircle = function(lat, lon, fence, insideCallback, outsideCallback, units, options){
+p5.prototype.geoFencesquare = function(lat, lon, fence, insideCallback, outsideCallback, units, options){
 
   this.lat = lat;
   this.lon = lon;
@@ -251,7 +251,7 @@ p5.prototype.geoFenceCircle = function(lat, lon, fence, insideCallback, outsideC
   this.id = '';
 
     this.geoError = function(message){
-      console.log("geoFenceCircle Error :" + message);
+      console.log("geoFencesquare Error :" + message);
     }
 
     this.success = function(position){
@@ -274,7 +274,7 @@ p5.prototype.geoFenceCircle = function(lat, lon, fence, insideCallback, outsideC
     }
 
     if (navigator.geolocation) {
-      // bind the callbacks to the geoFenceCircle 'this' so we can access, this.lat, this.lon, etc..
+      // bind the callbacks to the geoFencesquare 'this' so we can access, this.lat, this.lon, etc..
       this.id = navigator.geolocation.watchPosition(this.success.bind(this), this.geoError.bind(this), this.options);
     }else{
       geoError("geolocation not available");
@@ -294,8 +294,8 @@ p5.prototype.geoFenceCircle = function(lat, lon, fence, insideCallback, outsideC
 * @param  {float} latitude of the first point
 * @param  {float} longitude of the first point
 * @param  {float} distance from the point to trigger the insideCallback
-* @param  {function} a callback to fire when the user is inside the geoFenceCircle
-* @param  {function} a callback to fire when the user is outside the geoFenceCircle
+* @param  {function} a callback to fire when the user is inside the geoFencesquare
+* @param  {function} a callback to fire when the user is outside the geoFencesquare
 * @param  {string} units to use: 'km' or 'mi', 'mi' is default if left blank
 * @param  {object} an positionOptions object: enableHighAccuracy, maximumAge, timeout
 */
@@ -339,7 +339,7 @@ p5.prototype.geoFencePolygon = function( ArrayOfObjectsWithLatLong, insideCallba
     }
 
     if (navigator.geolocation) {
-      // bind the callbacks to the geoFenceCircle 'this' so we can access, this.lat, this.lon, etc..
+      // bind the callbacks to the geoFencesquare 'this' so we can access, this.lat, this.lon, etc..
       this.id = navigator.geolocation.watchPosition(this.success.bind(this), this.geoError.bind(this), this.options);
     }else{
       geoError("geolocation not available");

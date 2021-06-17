@@ -3493,7 +3493,7 @@
                   type: 'p5.Color'
                 },
                 example: [
-                  "\n<div>\n<code>\nlet c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nrect(30, 20, 55, 55); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nlet c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80); // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65); // Update 'c' with grayscale value\nfill(c); // Use updated 'c' as fill color\nellipse(75, 75, 80, 80); // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nlet c = color('magenta');\nfill(c); // Use 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nrect(20, 20, 60, 60); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nnoStroke(); // Don't draw a stroke around shapes\nlet c = color('#0f0');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('#00ff00');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set to the same color (solid blue)\nlet c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('rgb(0,0,255)');\nfill(c); // Use 'c' as fill color\nrect(10, 10, 35, 35); // Draw rectangle\n\nc = color('rgb(0%, 0%, 100%)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 35, 35); // Draw rectangle\n\nc = color('rgba(0, 0, 255, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(10, 55, 35, 35); // Draw rectangle\n\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 55, 35, 35); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSL color is also supported and can be specified\n// by value\nlet c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('hsl(160, 100%, 50%)');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('hsla(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSB color is also supported and can be specified\n// by value\nlet c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('hsb(160, 100%, 50%)');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('hsba(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nlet c; // Declare color 'c'\nnoStroke(); // Don't draw a stroke around shapes\n\n// If no colorMode is specified, then the\n// default of RGB with scale of 0-255 is used.\nc = color(50, 55, 100); // Create a color for 'c'\nfill(c); // Use color variable 'c' as fill color\nrect(0, 10, 45, 80); // Draw left rect\n\ncolorMode(HSB, 100); // Use HSB with scale of 0-100\nc = color(50, 55, 100); // Update 'c' with new color\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw right rect\n</code>\n</div>"
+                  "\n<div>\n<code>\nlet c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nrect(30, 20, 55, 55); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nlet c = color(255, 204, 0); // Define color 'c'\nfill(c); // Use color variable 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80); // Draw left square\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65); // Update 'c' with grayscale value\nfill(c); // Use updated 'c' as fill color\nellipse(75, 75, 80, 80); // Draw right square\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nlet c = color('magenta');\nfill(c); // Use 'c' as fill color\nnoStroke(); // Don't draw a stroke around shapes\nrect(20, 20, 60, 60); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nnoStroke(); // Don't draw a stroke around shapes\nlet c = color('#0f0');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('#00ff00');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set to the same color (solid blue)\nlet c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('rgb(0,0,255)');\nfill(c); // Use 'c' as fill color\nrect(10, 10, 35, 35); // Draw rectangle\n\nc = color('rgb(0%, 0%, 100%)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 35, 35); // Draw rectangle\n\nc = color('rgba(0, 0, 255, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(10, 55, 35, 35); // Draw rectangle\n\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 55, 35, 35); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSL color is also supported and can be specified\n// by value\nlet c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('hsl(160, 100%, 50%)');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('hsla(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSB color is also supported and can be specified\n// by value\nlet c;\nnoStroke(); // Don't draw a stroke around shapes\nc = color('hsb(160, 100%, 50%)');\nfill(c); // Use 'c' as fill color\nrect(0, 10, 45, 80); // Draw rectangle\n\nc = color('hsba(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nlet c; // Declare color 'c'\nnoStroke(); // Don't draw a stroke around shapes\n\n// If no colorMode is specified, then the\n// default of RGB with scale of 0-255 is used.\nc = color(50, 55, 100); // Create a color for 'c'\nfill(c); // Use color variable 'c' as fill color\nrect(0, 10, 45, 80); // Draw left rect\n\ncolorMode(HSB, 100); // Use HSB with scale of 0-100\nc = color(50, 55, 100); // Update 'c' with new color\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80); // Draw right rect\n</code>\n</div>"
                 ],
                 alt:
                   'Yellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left of canvas, black ellipse in bottom right,both 80x80.\nBright fuchsia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and lighter green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.',
@@ -3878,7 +3878,7 @@
                 example: [
                   '\n<div>\n<code>\nlet squareColor;\n\nfunction setup() {\n  ellipseMode(CORNERS);\n  strokeWeight(4);\n  squareColor = color(100, 50, 150);\n}\n\nfunction draw() {\n  background(255);\n\n  noFill();\n  stroke(0);\n  ellipse(10, 10, width - 10, height - 10);\n\n  squareColor.setAlpha(128 + 128 * sin(millis() / 1000));\n  fill(squareColor);\n  noStroke();\n  rect(13, 13, width - 26, height - 26);\n}\n</code>\n</div>'
                 ],
-                alt: 'circle behind a square with gradually changing opacity',
+                alt: 'square behind a square with gradually changing opacity',
                 class: 'p5.Color',
                 module: 'Color',
                 submodule: 'Creating & Reading'
@@ -4390,7 +4390,7 @@
                 file: 'src/core/shape/2d_primitives.js',
                 line: 16,
                 description:
-                  '<p>This function does 3 things:</p>\n<ol>\n<li><p>Bounds the desired start/stop angles for an arc (in radians) so that:</p>\n<pre><code>0 &lt;= start &lt; TWO_PI ;    start &lt;= stop &lt; start + TWO_PI\n</code></pre><p>This means that the arc rendering functions don&#39;t have to be concerned\nwith what happens if stop is smaller than start, or if the arc &#39;goes\nround more than once&#39;, etc.: they can just start at start and increase\nuntil stop and the correct arc will be drawn.</p>\n</li>\n<li><p>Optionally adjusts the angles within each quadrant to counter the naive\nscaling of the underlying ellipse up from the unit circle.  Without\nthis, the angles become arbitrary when width != height: 45 degrees\nmight be drawn at 5 degrees on a &#39;wide&#39; ellipse, or at 85 degrees on\na &#39;tall&#39; ellipse.</p>\n</li>\n<li><p>Flags up when start and stop correspond to the same place on the\nunderlying ellipse.  This is useful if you want to do something special\nthere (like rendering a whole ellipse instead).</p>\n</li>\n</ol>\n',
+                  '<p>This function does 3 things:</p>\n<ol>\n<li><p>Bounds the desired start/stop angles for an arc (in radians) so that:</p>\n<pre><code>0 &lt;= start &lt; TWO_PI ;    start &lt;= stop &lt; start + TWO_PI\n</code></pre><p>This means that the arc rendering functions don&#39;t have to be concerned\nwith what happens if stop is smaller than start, or if the arc &#39;goes\nround more than once&#39;, etc.: they can just start at start and increase\nuntil stop and the correct arc will be drawn.</p>\n</li>\n<li><p>Optionally adjusts the angles within each quadrant to counter the naive\nscaling of the underlying ellipse up from the unit square.  Without\nthis, the angles become arbitrary when width != height: 45 degrees\nmight be drawn at 5 degrees on a &#39;wide&#39; ellipse, or at 85 degrees on\na &#39;tall&#39; ellipse.</p>\n</li>\n<li><p>Flags up when start and stop correspond to the same place on the\nunderlying ellipse.  This is useful if you want to do something special\nthere (like rendering a whole ellipse instead).</p>\n</li>\n</ol>\n',
                 class: 'p5',
                 module: 'Shape',
                 submodule: '2D Primitives'
@@ -4399,7 +4399,7 @@
                 file: 'src/core/shape/2d_primitives.js',
                 line: 102,
                 description:
-                  '<p>Draw an arc to the screen. If called with only x, y, w, h, start, and\nstop, the arc will be drawn and filled as an open pie segment. If a mode parameter is provided, the arc\nwill be filled like an open semi-circle (OPEN) , a closed semi-circle (CHORD), or as a closed pie segment (PIE). The\norigin may be changed with the <a href="#/p5/ellipseMode">ellipseMode()</a> function.<br><br>\nThe arc is always drawn clockwise from wherever start falls to wherever stop falls on the ellipse.\nAdding or subtracting TWO_PI to either angle does not change where they fall.\nIf both start and stop fall at the same place, a full ellipse will be drawn. Be aware that the the\ny-axis increases in the downward direction therefore the values of PI is counter clockwise.</p>\n',
+                  '<p>Draw an arc to the screen. If called with only x, y, w, h, start, and\nstop, the arc will be drawn and filled as an open pie segment. If a mode parameter is provided, the arc\nwill be filled like an open semi-square (OPEN) , a closed semi-square (CHORD), or as a closed pie segment (PIE). The\norigin may be changed with the <a href="#/p5/ellipseMode">ellipseMode()</a> function.<br><br>\nThe arc is always drawn clockwise from wherever start falls to wherever stop falls on the ellipse.\nAdding or subtracting TWO_PI to either angle does not change where they fall.\nIf both start and stop fall at the same place, a full ellipse will be drawn. Be aware that the the\ny-axis increases in the downward direction therefore the values of PI is counter clockwise.</p>\n',
                 itemtype: 'method',
                 name: 'arc',
                 params: [
@@ -4453,7 +4453,7 @@
                   '\n<div>\n<code>\narc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI + QUARTER_PI);\narc(50, 55, 80, 80, PI + QUARTER_PI, TWO_PI);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI, OPEN);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI + QUARTER_PI, PIE);\n</code>\n</div>'
                 ],
                 alt:
-                  'shattered outline of an ellipse with a quarter of a white circle bottom-right.\nwhite ellipse with top right quarter missing.\nwhite ellipse with black outline with top right missing.\nwhite ellipse with top right missing with black outline around shape.\nwhite ellipse with top right quarter missing with black outline around the shape.',
+                  'shattered outline of an ellipse with a quarter of a white square bottom-right.\nwhite ellipse with top right quarter missing.\nwhite ellipse with black outline with top right missing.\nwhite ellipse with top right missing with black outline around shape.\nwhite ellipse with top right quarter missing with black outline around the shape.',
                 class: 'p5',
                 module: 'Shape',
                 submodule: '2D Primitives'
@@ -4462,7 +4462,7 @@
                 file: 'src/core/shape/2d_primitives.js',
                 line: 210,
                 description:
-                  '<p>Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape&#39;s width and height. If\nno height is specified, the value of width is used for both the width and\nheight. If a negative height or width is specified, the absolute value is taken.\nThe origin may be changed with the <a href="#/p5/ellipseMode">ellipseMode()</a> function.</p>\n',
+                  '<p>Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a square. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape&#39;s width and height. If\nno height is specified, the value of width is used for both the width and\nheight. If a negative height or width is specified, the absolute value is taken.\nThe origin may be changed with the <a href="#/p5/ellipseMode">ellipseMode()</a> function.</p>\n',
                 itemtype: 'method',
                 name: 'ellipse',
                 chainable: 1,
@@ -4537,31 +4537,31 @@
                 file: 'src/core/shape/2d_primitives.js',
                 line: 270,
                 description:
-                  '<p>Draws a circle to the screen. A circle is a simple closed shape.\nIt is the set of all points in a plane that are at a given distance from a given point, the centre.\nThis function is a special case of the ellipse() function, where the width and height of the ellipse are the same.\nHeight and width of the ellipse correspond to the diameter of the circle.\nBy default, the first two parameters set the location of the centre of the circle, the third sets the diameter of the circle.</p>\n',
+                  '<p>Draws a square to the screen. A square is a simple closed shape.\nIt is the set of all points in a plane that are at a given distance from a given point, the centre.\nThis function is a special case of the ellipse() function, where the width and height of the ellipse are the same.\nHeight and width of the ellipse correspond to the diameter of the square.\nBy default, the first two parameters set the location of the centre of the square, the third sets the diameter of the square.</p>\n',
                 itemtype: 'method',
-                name: 'circle',
+                name: 'square',
                 params: [
                   {
                     name: 'x',
-                    description: '<p>x-coordinate of the centre of the circle.</p>\n',
+                    description: '<p>x-coordinate of the centre of the square.</p>\n',
                     type: 'Number'
                   },
                   {
                     name: 'y',
-                    description: '<p>y-coordinate of the centre of the circle.</p>\n',
+                    description: '<p>y-coordinate of the centre of the square.</p>\n',
                     type: 'Number'
                   },
                   {
                     name: 'd',
-                    description: '<p>diameter of the circle.</p>\n',
+                    description: '<p>diameter of the square.</p>\n',
                     type: 'Number'
                   }
                 ],
                 chainable: 1,
                 example: [
-                  '\n<div>\n<code>\n// Draw a circle at location (30, 30) with a diameter of 20.\ncircle(30, 30, 20);\n</code>\n</div>'
+                  '\n<div>\n<code>\n// Draw a square at location (30, 30) with a diameter of 20.\nsquare(30, 30, 20);\n</code>\n</div>'
                 ],
-                alt: 'white circle with black outline in mid of canvas that is 55x55.',
+                alt: 'white square with black outline in mid of canvas that is 55x55.',
                 class: 'p5',
                 module: 'Shape',
                 submodule: '2D Primitives'
@@ -6201,13 +6201,13 @@
                 file: 'src/core/constants.js',
                 line: 61,
                 description:
-                  '<p>HALF_PI is a mathematical constant with the value\n1.57079632679489661923. It is half the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
+                  '<p>HALF_PI is a mathematical constant with the value\n1.57079632679489661923. It is half the ratio of the\ncircumference of a square to its diameter. It is useful in\ncombination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
                 itemtype: 'property',
                 name: 'HALF_PI',
                 type: 'Number',
                 final: 1,
                 example: ['\n<div><code>\narc(50, 50, 80, 80, 0, HALF_PI);\n</code></div>'],
-                alt: '80x80 white quarter-circle with curve toward bottom right of canvas.',
+                alt: '80x80 white quarter-square with curve toward bottom right of canvas.',
                 class: 'p5',
                 module: 'Constants',
                 submodule: 'Constants'
@@ -6216,13 +6216,13 @@
                 file: 'src/core/constants.js',
                 line: 80,
                 description:
-                  '<p>PI is a mathematical constant with the value\n3.14159265358979323846. It is the ratio of the circumference\nof a circle to its diameter. It is useful in combination with\nthe trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
+                  '<p>PI is a mathematical constant with the value\n3.14159265358979323846. It is the ratio of the circumference\nof a square to its diameter. It is useful in combination with\nthe trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
                 itemtype: 'property',
                 name: 'PI',
                 type: 'Number',
                 final: 1,
                 example: ['\n<div><code>\narc(50, 50, 80, 80, 0, PI);\n</code></div>'],
-                alt: 'white half-circle with curve toward bottom of canvas.',
+                alt: 'white half-square with curve toward bottom of canvas.',
                 class: 'p5',
                 module: 'Constants',
                 submodule: 'Constants'
@@ -6231,7 +6231,7 @@
                 file: 'src/core/constants.js',
                 line: 99,
                 description:
-                  '<p>QUARTER_PI is a mathematical constant with the value 0.7853982.\nIt is one quarter the ratio of the circumference of a circle to\nits diameter. It is useful in combination with the trigonometric\nfunctions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
+                  '<p>QUARTER_PI is a mathematical constant with the value 0.7853982.\nIt is one quarter the ratio of the circumference of a square to\nits diameter. It is useful in combination with the trigonometric\nfunctions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
                 itemtype: 'property',
                 name: 'QUARTER_PI',
                 type: 'Number',
@@ -6240,7 +6240,7 @@
                   '\n<div><code>\narc(50, 50, 80, 80, 0, QUARTER_PI);\n</code></div>'
                 ],
                 alt:
-                  'white eighth-circle rotated about 40 degrees with curve bottom right canvas.',
+                  'white eighth-square rotated about 40 degrees with curve bottom right canvas.',
                 class: 'p5',
                 module: 'Constants',
                 submodule: 'Constants'
@@ -6249,7 +6249,7 @@
                 file: 'src/core/constants.js',
                 line: 118,
                 description:
-                  '<p>TAU is an alias for TWO_PI, a mathematical constant with the\nvalue 6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
+                  '<p>TAU is an alias for TWO_PI, a mathematical constant with the\nvalue 6.28318530717958647693. It is twice the ratio of the\ncircumference of a square to its diameter. It is useful in\ncombination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
                 itemtype: 'property',
                 name: 'TAU',
                 type: 'Number',
@@ -6264,7 +6264,7 @@
                 file: 'src/core/constants.js',
                 line: 137,
                 description:
-                  '<p>TWO_PI is a mathematical constant with the value\n6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
+                  '<p>TWO_PI is a mathematical constant with the value\n6.28318530717958647693. It is twice the ratio of the\ncircumference of a square to its diameter. It is useful in\ncombination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.</p>\n',
                 itemtype: 'property',
                 name: 'TWO_PI',
                 type: 'Number',
@@ -8028,7 +8028,7 @@
                   "\n<div class='norender'><code>\nlet bg;\nfunction setup() {\n  bg = createCanvas(100, 100);\n  bg.background(0);\n  image(bg, 0, 0);\n  bg.remove();\n}\n</code></div>\n\n<div><code>\nlet bg;\nfunction setup() {\n  pixelDensity(1);\n  createCanvas(100, 100);\n  stroke(255);\n  fill(0);\n\n  // create and draw the background image\n  bg = createGraphics(100, 100);\n  bg.background(200);\n  bg.ellipse(50, 50, 80, 80);\n}\nfunction draw() {\n  let t = millis() / 1000;\n  // draw the background\n  if (bg) {\n    image(bg, frameCount % 100, 0);\n    image(bg, frameCount % 100 - 100, 0);\n  }\n  // draw the foreground\n  let p = p5.Vector.fromAngle(t, 35).add(50, 50);\n  ellipse(p.x, p.y, 30);\n}\nfunction mouseClicked() {\n  // remove the background\n  if (bg) {\n    bg.remove();\n    bg = null;\n  }\n}\n</code></div>"
                 ],
                 alt:
-                  'no image\na multi-colored circle moving back and forth over a scrolling background.',
+                  'no image\na multi-colored square moving back and forth over a scrolling background.',
                 class: 'p5.Graphics',
                 module: 'Rendering',
                 submodule: 'Rendering'
@@ -8070,7 +8070,7 @@
                 file: 'src/core/p5.Renderer2D.js',
                 line: 407,
                 description:
-                  '<p>Generate a cubic Bezier representing an arc on the unit circle of total\nangle <code>size</code> radians, beginning <code>start</code> radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.</p>\n<p>See <a href="http://www.joecridge.me/bezier.pdf">www.joecridge.me/bezier.pdf</a> for an explanation of the method.</p>\n',
+                  '<p>Generate a cubic Bezier representing an arc on the unit square of total\nangle <code>size</code> radians, beginning <code>start</code> radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.</p>\n<p>See <a href="http://www.joecridge.me/bezier.pdf">www.joecridge.me/bezier.pdf</a> for an explanation of the method.</p>\n',
                 class: 'p5',
                 module: 'Rendering'
               },
@@ -8192,7 +8192,7 @@
                   '\n<div>\n<code>\nlet pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(100, 100);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width / 2, pg.height / 2, 50, 50);\n  image(pg, 50, 50);\n  image(pg, 0, 0, 50, 50);\n}\n</code>\n</div>'
                 ],
                 alt:
-                  '4 grey squares alternating light and dark grey. White quarter circle mid-left.',
+                  '4 grey squares alternating light and dark grey. White quarter square mid-left.',
                 class: 'p5',
                 module: 'Rendering',
                 submodule: 'Rendering'
@@ -8277,7 +8277,7 @@
                 itemtype: 'method',
                 name: 'push',
                 example: [
-                  '\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\ntranslate(50, 0);\nellipse(0, 50, 33, 33); // Middle circle\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33); // Left-middle circle\n\npush(); // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33); // Right-middle circle\npop(); // Restore previous state\n\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>'
+                  '\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left square\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\ntranslate(50, 0);\nellipse(0, 50, 33, 33); // Middle square\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right square\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left square\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33); // Left-middle square\n\npush(); // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33); // Right-middle square\npop(); // Restore previous state\n\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right square\n</code>\n</div>'
                 ],
                 alt:
                   'Gold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.',
@@ -8293,7 +8293,7 @@
                 itemtype: 'method',
                 name: 'pop',
                 example: [
-                  '\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\ntranslate(50, 0);\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(0, 50, 33, 33); // Middle circle\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left circle\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33); // Left-middle circle\n\npush(); // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33); // Right-middle circle\npop(); // Restore previous state\n\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right circle\n</code>\n</div>'
+                  '\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left square\n\npush(); // Start a new drawing state\ntranslate(50, 0);\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(0, 50, 33, 33); // Middle square\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right square\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33); // Left square\n\npush(); // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33); // Left-middle square\n\npush(); // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33); // Right-middle square\npop(); // Restore previous state\n\npop(); // Restore original state\n\nellipse(100, 50, 33, 33); // Right square\n</code>\n</div>'
                 ],
                 alt:
                   'Gold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.',
@@ -8610,7 +8610,7 @@
                   '\n<div>\n<code>\ntranslate(30, 20);\nrect(0, 0, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\nrect(0, 0, 55, 55); // Draw rect at original 0,0\ntranslate(30, 20);\nrect(0, 0, 55, 55); // Draw rect at new 0,0\ntranslate(14, 14);\nrect(0, 0, 55, 55); // Draw rect at new 0,0\n</code>\n</div>\n\n\n<div>\n<code>\nfunction draw() {\n  background(200);\n  rectMode(CENTER);\n  translate(width / 2, height / 2);\n  translate(p5.Vector.fromAngle(millis() / 1000, 40));\n  rect(0, 0, 20, 20);\n}\n</code>\n</div>'
                 ],
                 alt:
-                  'white 55x55 rect with black outline at center right.\n3 white 55x55 rects with black outlines at top-l, center-r and bottom-r.\na 20x20 white rect moving in a circle around the canvas',
+                  'white 55x55 rect with black outline at center right.\n3 white 55x55 rects with black outlines at top-l, center-r and bottom-r.\na 20x20 white rect moving in a square around the canvas',
                 class: 'p5',
                 module: 'Transform',
                 submodule: 'Transform',
@@ -9849,7 +9849,7 @@
                 type: 'Number',
                 readonly: '',
                 example: [
-                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  let speed = abs(winMouseX - pwinMouseX);\n  //change the size of the circle\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  let speed = abs(winMouseX - pwinMouseX);\n  //change the size of the square\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
                 ],
                 alt:
                   'fuchsia ellipse moves with mouse x and y. Grows and shrinks with mouse speed',
@@ -9867,7 +9867,7 @@
                 type: 'Number',
                 readonly: '',
                 example: [
-                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  let speed = abs(winMouseY - pwinMouseY);\n  //change the size of the circle\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  let speed = abs(winMouseY - pwinMouseY);\n  //change the size of the square\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
                 ],
                 alt:
                   'fuchsia ellipse moves with mouse x and y. Grows and shrinks with mouse speed',
@@ -13864,7 +13864,7 @@
                   type: 'Number'
                 },
                 example: [
-                  '\n<div><code>\nfunction draw() {\n  background(200);\n\n  let leftWall = 25;\n  let rightWall = 75;\n\n  // xm is just the mouseX, while\n  // xc is the mouseX, but constrained\n  // between the leftWall and rightWall!\n  let xm = mouseX;\n  let xc = constrain(mouseX, leftWall, rightWall);\n\n  // Draw the walls.\n  stroke(150);\n  line(leftWall, 0, leftWall, height);\n  line(rightWall, 0, rightWall, height);\n\n  // Draw xm and xc as circles.\n  noStroke();\n  fill(150);\n  ellipse(xm, 33, 9, 9); // Not Constrained\n  fill(0);\n  ellipse(xc, 66, 9, 9); // Constrained\n}\n</code></div>'
+                  '\n<div><code>\nfunction draw() {\n  background(200);\n\n  let leftWall = 25;\n  let rightWall = 75;\n\n  // xm is just the mouseX, while\n  // xc is the mouseX, but constrained\n  // between the leftWall and rightWall!\n  let xm = mouseX;\n  let xc = constrain(mouseX, leftWall, rightWall);\n\n  // Draw the walls.\n  stroke(150);\n  line(leftWall, 0, leftWall, height);\n  line(rightWall, 0, rightWall, height);\n\n  // Draw xm and xc as squares.\n  noStroke();\n  fill(150);\n  ellipse(xm, 33, 9, 9); // Not Constrained\n  fill(0);\n  ellipse(xc, 66, 9, 9); // Constrained\n}\n</code></div>'
                 ],
                 alt:
                   '2 vertical lines. 2 ellipses move with mouse X 1 does not move passed lines',
@@ -16036,7 +16036,7 @@
                 file: 'src/math/trigonometry.js',
                 line: 244,
                 description:
-                  '<p>Converts a radian measurement to its corresponding value in degrees.\nRadians and degrees are two ways of measuring the same thing. There are\n360 degrees in a circle and 2*PI radians in a circle. For example,\n90° = PI/2 = 1.5707964. This function does not take into account the\ncurrent <a href="#/p5/angleMode">angleMode</a>.</p>\n',
+                  '<p>Converts a radian measurement to its corresponding value in degrees.\nRadians and degrees are two ways of measuring the same thing. There are\n360 degrees in a square and 2*PI radians in a square. For example,\n90° = PI/2 = 1.5707964. This function does not take into account the\ncurrent <a href="#/p5/angleMode">angleMode</a>.</p>\n',
                 itemtype: 'method',
                 name: 'degrees',
                 params: [
@@ -16061,7 +16061,7 @@
                 file: 'src/math/trigonometry.js',
                 line: 271,
                 description:
-                  '<p>Converts a degree measurement to its corresponding value in radians.\nRadians and degrees are two ways of measuring the same thing. There are\n360 degrees in a circle and 2*PI radians in a circle. For example,\n90° = PI/2 = 1.5707964. This function does not take into account the\ncurrent <a href="#/p5/angleMode">angleMode</a>.</p>\n',
+                  '<p>Converts a degree measurement to its corresponding value in radians.\nRadians and degrees are two ways of measuring the same thing. There are\n360 degrees in a square and 2*PI radians in a square. For example,\n90° = PI/2 = 1.5707964. This function does not take into account the\ncurrent <a href="#/p5/angleMode">angleMode</a>.</p>\n',
                 itemtype: 'method',
                 name: 'radians',
                 params: [
@@ -18022,7 +18022,7 @@
                 params: [
                   {
                     name: 'radius',
-                    description: '<p>radius of circle</p>\n',
+                    description: '<p>radius of square</p>\n',
                     type: 'Number',
                     optional: true
                   },
@@ -22325,7 +22325,7 @@
                   }
                 ],
                 example: [
-                  "\n<div><code>\nvar song;\n\nfunction preload() {\n  song = loadSound('assets/Damscray_DancingTiger.mp3');\n}\n\nfunction setup() {\n  song.loop();\n}\n\nfunction draw() {\n  background(200);\n\n  // Set the rate to a range between 0.1 and 4\n  // Changing the rate also alters the pitch\n  var speed = map(mouseY, 0.1, height, 0, 2);\n  speed = constrain(speed, 0.01, 4);\n  song.rate(speed);\n\n  // Draw a circle to show what is going on\n  stroke(0);\n  fill(51, 100);\n  ellipse(mouseX, 100, 48, 48);\n}\n\n </code>\n </div>\n"
+                  "\n<div><code>\nvar song;\n\nfunction preload() {\n  song = loadSound('assets/Damscray_DancingTiger.mp3');\n}\n\nfunction setup() {\n  song.loop();\n}\n\nfunction draw() {\n  background(200);\n\n  // Set the rate to a range between 0.1 and 4\n  // Changing the rate also alters the pitch\n  var speed = map(mouseY, 0.1, height, 0, 2);\n  speed = constrain(speed, 0.01, 4);\n  song.rate(speed);\n\n  // Draw a square to show what is going on\n  stroke(0);\n  fill(51, 100);\n  ellipse(mouseX, 100, 48, 48);\n}\n\n </code>\n </div>\n"
                 ],
                 class: 'p5.SoundFile',
                 module: 'p5.sound',
@@ -28536,7 +28536,7 @@
               },
               {
                 message:
-                  "Missing item type\nThis function does 3 things:\n\n  1. Bounds the desired start/stop angles for an arc (in radians) so that:\n\n         0 <= start < TWO_PI ;    start <= stop < start + TWO_PI\n\n     This means that the arc rendering functions don't have to be concerned\n     with what happens if stop is smaller than start, or if the arc 'goes\n     round more than once', etc.: they can just start at start and increase\n     until stop and the correct arc will be drawn.\n\n  2. Optionally adjusts the angles within each quadrant to counter the naive\n     scaling of the underlying ellipse up from the unit circle.  Without\n     this, the angles become arbitrary when width != height: 45 degrees\n     might be drawn at 5 degrees on a 'wide' ellipse, or at 85 degrees on\n     a 'tall' ellipse.\n\n  3. Flags up when start and stop correspond to the same place on the\n     underlying ellipse.  This is useful if you want to do something special\n     there (like rendering a whole ellipse instead).",
+                  "Missing item type\nThis function does 3 things:\n\n  1. Bounds the desired start/stop angles for an arc (in radians) so that:\n\n         0 <= start < TWO_PI ;    start <= stop < start + TWO_PI\n\n     This means that the arc rendering functions don't have to be concerned\n     with what happens if stop is smaller than start, or if the arc 'goes\n     round more than once', etc.: they can just start at start and increase\n     until stop and the correct arc will be drawn.\n\n  2. Optionally adjusts the angles within each quadrant to counter the naive\n     scaling of the underlying ellipse up from the unit square.  Without\n     this, the angles become arbitrary when width != height: 45 degrees\n     might be drawn at 5 degrees on a 'wide' ellipse, or at 85 degrees on\n     a 'tall' ellipse.\n\n  3. Flags up when start and stop correspond to the same place on the\n     underlying ellipse.  This is useful if you want to do something special\n     there (like rendering a whole ellipse instead).",
                 line: ' src/core/shape/2d_primitives.js:16'
               },
               {
@@ -28599,7 +28599,7 @@
               },
               {
                 message:
-                  'Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.',
+                  'Missing item type\nGenerate a cubic Bezier representing an arc on the unit square of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.',
                 line: ' src/core/p5.Renderer2D.js:407'
               },
               {
@@ -39204,7 +39204,7 @@
                * @param  {number} [fontSize=72] - Font size in pixels. We scale the glyph units by `1 / unitsPerEm * fontSize`.
                */
               Glyph.prototype.drawPoints = function(ctx, x, y, fontSize) {
-                function drawCircles(l, x, y, scale) {
+                function drawsquares(l, x, y, scale) {
                   var PI_SQ = Math.PI * 2;
                   ctx.beginPath();
                   for (var j = 0; j < l.length; j += 1) {
@@ -39221,28 +39221,28 @@
                 fontSize = fontSize !== undefined ? fontSize : 24;
                 var scale = 1 / this.path.unitsPerEm * fontSize;
 
-                var blueCircles = [];
-                var redCircles = [];
+                var bluesquares = [];
+                var redsquares = [];
                 var path = this.path;
                 for (var i = 0; i < path.commands.length; i += 1) {
                   var cmd = path.commands[i];
                   if (cmd.x !== undefined) {
-                    blueCircles.push({ x: cmd.x, y: -cmd.y });
+                    bluesquares.push({ x: cmd.x, y: -cmd.y });
                   }
 
                   if (cmd.x1 !== undefined) {
-                    redCircles.push({ x: cmd.x1, y: -cmd.y1 });
+                    redsquares.push({ x: cmd.x1, y: -cmd.y1 });
                   }
 
                   if (cmd.x2 !== undefined) {
-                    redCircles.push({ x: cmd.x2, y: -cmd.y2 });
+                    redsquares.push({ x: cmd.x2, y: -cmd.y2 });
                   }
                 }
 
                 ctx.fillStyle = 'blue';
-                drawCircles(blueCircles, x, y, scale);
+                drawsquares(bluesquares, x, y, scale);
                 ctx.fillStyle = 'red';
-                drawCircles(redCircles, x, y, scale);
+                drawsquares(redsquares, x, y, scale);
               };
 
               /**
@@ -50377,13 +50377,13 @@
            * let c = color(255, 204, 0); // Define color 'c'
            * fill(c); // Use color variable 'c' as fill color
            * noStroke(); // Don't draw a stroke around shapes
-           * ellipse(25, 25, 80, 80); // Draw left circle
+           * ellipse(25, 25, 80, 80); // Draw left square
            *
            * // Using only one value with color()
            * // generates a grayscale value.
            * c = color(65); // Update 'c' with grayscale value
            * fill(c); // Use updated 'c' as fill color
-           * ellipse(75, 75, 80, 80); // Draw right circle
+           * ellipse(75, 75, 80, 80); // Draw right square
            * </code>
            * </div>
            *
@@ -51180,7 +51180,7 @@
            * </div>
            *
            * @alt
-           * circle behind a square with gradually changing opacity
+           * square behind a square with gradually changing opacity
            **/
           p5.Color.prototype.setAlpha = function(new_alpha) {
             this._array[3] = new_alpha / this.maxes[this.mode][3];
@@ -52662,7 +52662,7 @@
             /**
              * HALF_PI is a mathematical constant with the value
              * 1.57079632679489661923. It is half the ratio of the
-             * circumference of a circle to its diameter. It is useful in
+             * circumference of a square to its diameter. It is useful in
              * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
              *
              * @property {Number} HALF_PI
@@ -52674,14 +52674,14 @@
              * </code></div>
              *
              * @alt
-             * 80x80 white quarter-circle with curve toward bottom right of canvas.
+             * 80x80 white quarter-square with curve toward bottom right of canvas.
              *
              */
             HALF_PI: PI / 2,
             /**
              * PI is a mathematical constant with the value
              * 3.14159265358979323846. It is the ratio of the circumference
-             * of a circle to its diameter. It is useful in combination with
+             * of a square to its diameter. It is useful in combination with
              * the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
              *
              * @property {Number} PI
@@ -52693,13 +52693,13 @@
              * </code></div>
              *
              * @alt
-             * white half-circle with curve toward bottom of canvas.
+             * white half-square with curve toward bottom of canvas.
              *
              */
             PI: PI,
             /**
              * QUARTER_PI is a mathematical constant with the value 0.7853982.
-             * It is one quarter the ratio of the circumference of a circle to
+             * It is one quarter the ratio of the circumference of a square to
              * its diameter. It is useful in combination with the trigonometric
              * functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
              *
@@ -52712,14 +52712,14 @@
              * </code></div>
              *
              * @alt
-             * white eighth-circle rotated about 40 degrees with curve bottom right canvas.
+             * white eighth-square rotated about 40 degrees with curve bottom right canvas.
              *
              */
             QUARTER_PI: PI / 4,
             /**
              * TAU is an alias for TWO_PI, a mathematical constant with the
              * value 6.28318530717958647693. It is twice the ratio of the
-             * circumference of a circle to its diameter. It is useful in
+             * circumference of a square to its diameter. It is useful in
              * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
              *
              * @property {Number} TAU
@@ -52738,7 +52738,7 @@
             /**
              * TWO_PI is a mathematical constant with the value
              * 6.28318530717958647693. It is twice the ratio of the
-             * circumference of a circle to its diameter. It is useful in
+             * circumference of a square to its diameter. It is useful in
              * combination with the trigonometric functions <a href="#/p5/sin">sin()</a> and <a href="#/p5/cos">cos()</a>.
              *
              * @property {Number} TWO_PI
@@ -56656,7 +56656,7 @@
            *
            * @alt
            * no image
-           * a multi-colored circle moving back and forth over a scrolling background.
+           * a multi-colored square moving back and forth over a scrolling background.
            *
            */
           p5.Graphics.prototype.remove = function() {
@@ -57505,7 +57505,7 @@
           //////////////////////////////////////////////
 
           /**
-           * Generate a cubic Bezier representing an arc on the unit circle of total
+           * Generate a cubic Bezier representing an arc on the unit square of total
            * angle `size` radians, beginning `start` radians above the x-axis. Up to
            * four of these curves are combined to make a full arc.
            *
@@ -58617,7 +58617,7 @@
            * </div>
            *
            * @alt
-           * 4 grey squares alternating light and dark grey. White quarter circle mid-left.
+           * 4 grey squares alternating light and dark grey. White quarter square mid-left.
            *
            */
           p5.prototype.createGraphics = function(w, h, renderer) {
@@ -58748,7 +58748,7 @@
            *      until stop and the correct arc will be drawn.
            *
            *   2. Optionally adjusts the angles within each quadrant to counter the naive
-           *      scaling of the underlying ellipse up from the unit circle.  Without
+           *      scaling of the underlying ellipse up from the unit square.  Without
            *      this, the angles become arbitrary when width != height: 45 degrees
            *      might be drawn at 5 degrees on a 'wide' ellipse, or at 85 degrees on
            *      a 'tall' ellipse.
@@ -58824,7 +58824,7 @@
           /**
            * Draw an arc to the screen. If called with only x, y, w, h, start, and
            * stop, the arc will be drawn and filled as an open pie segment. If a mode parameter is provided, the arc
-           * will be filled like an open semi-circle (OPEN) , a closed semi-circle (CHORD), or as a closed pie segment (PIE). The
+           * will be filled like an open semi-square (OPEN) , a closed semi-square (CHORD), or as a closed pie segment (PIE). The
            * origin may be changed with the <a href="#/p5/ellipseMode">ellipseMode()</a> function.<br><br>
            * The arc is always drawn clockwise from wherever start falls to wherever stop falls on the ellipse.
            * Adding or subtracting TWO_PI to either angle does not change where they fall.
@@ -58880,7 +58880,7 @@
            * </div>
            *
            * @alt
-           *shattered outline of an ellipse with a quarter of a white circle bottom-right.
+           *shattered outline of an ellipse with a quarter of a white square bottom-right.
            *white ellipse with top right quarter missing.
            *white ellipse with black outline with top right missing.
            *white ellipse with top right missing with black outline around shape.
@@ -58931,7 +58931,7 @@
 
           /**
            * Draws an ellipse (oval) to the screen. An ellipse with equal width and
-           * height is a circle. By default, the first two parameters set the location,
+           * height is a square. By default, the first two parameters set the location,
            * and the third and fourth parameters set the shape's width and height. If
            * no height is specified, the value of width is used for both the width and
            * height. If a negative height or width is specified, the absolute value is taken.
@@ -58990,29 +58990,29 @@
           };
 
           /**
-           * Draws a circle to the screen. A circle is a simple closed shape.
+           * Draws a square to the screen. A square is a simple closed shape.
            * It is the set of all points in a plane that are at a given distance from a given point, the centre.
            * This function is a special case of the ellipse() function, where the width and height of the ellipse are the same.
-           * Height and width of the ellipse correspond to the diameter of the circle.
-           * By default, the first two parameters set the location of the centre of the circle, the third sets the diameter of the circle.
+           * Height and width of the ellipse correspond to the diameter of the square.
+           * By default, the first two parameters set the location of the centre of the square, the third sets the diameter of the square.
            *
-           * @method circle
-           * @param  {Number} x  x-coordinate of the centre of the circle.
-           * @param  {Number} y  y-coordinate of the centre of the circle.
-           * @param  {Number} d  diameter of the circle.
+           * @method square
+           * @param  {Number} x  x-coordinate of the centre of the square.
+           * @param  {Number} y  y-coordinate of the centre of the square.
+           * @param  {Number} d  diameter of the square.
            * @chainable
            * @example
            * <div>
            * <code>
-           * // Draw a circle at location (30, 30) with a diameter of 20.
-           * circle(30, 30, 20);
+           * // Draw a square at location (30, 30) with a diameter of 20.
+           * square(30, 30, 20);
            * </code>
            * </div>
            *
            * @alt
-           * white circle with black outline in mid of canvas that is 55x55.
+           * white square with black outline in mid of canvas that is 55x55.
            */
-          p5.prototype.circle = function() {
+          p5.prototype.square = function() {
             var args = Array.prototype.slice.call(arguments, 0, 2);
             args.push(arguments[2]);
             args.push(arguments[2]);
@@ -61519,35 +61519,35 @@
            * @example
            * <div>
            * <code>
-           * ellipse(0, 50, 33, 33); // Left circle
+           * ellipse(0, 50, 33, 33); // Left square
            *
            * push(); // Start a new drawing state
            * strokeWeight(10);
            * fill(204, 153, 0);
            * translate(50, 0);
-           * ellipse(0, 50, 33, 33); // Middle circle
+           * ellipse(0, 50, 33, 33); // Middle square
            * pop(); // Restore original state
            *
-           * ellipse(100, 50, 33, 33); // Right circle
+           * ellipse(100, 50, 33, 33); // Right square
            * </code>
            * </div>
            * <div>
            * <code>
-           * ellipse(0, 50, 33, 33); // Left circle
+           * ellipse(0, 50, 33, 33); // Left square
            *
            * push(); // Start a new drawing state
            * strokeWeight(10);
            * fill(204, 153, 0);
-           * ellipse(33, 50, 33, 33); // Left-middle circle
+           * ellipse(33, 50, 33, 33); // Left-middle square
            *
            * push(); // Start another new drawing state
            * stroke(0, 102, 153);
-           * ellipse(66, 50, 33, 33); // Right-middle circle
+           * ellipse(66, 50, 33, 33); // Right-middle square
            * pop(); // Restore previous state
            *
            * pop(); // Restore original state
            *
-           * ellipse(100, 50, 33, 33); // Right circle
+           * ellipse(100, 50, 33, 33); // Right square
            * </code>
            * </div>
            *
@@ -61589,35 +61589,35 @@
            * @example
            * <div>
            * <code>
-           * ellipse(0, 50, 33, 33); // Left circle
+           * ellipse(0, 50, 33, 33); // Left square
            *
            * push(); // Start a new drawing state
            * translate(50, 0);
            * strokeWeight(10);
            * fill(204, 153, 0);
-           * ellipse(0, 50, 33, 33); // Middle circle
+           * ellipse(0, 50, 33, 33); // Middle square
            * pop(); // Restore original state
            *
-           * ellipse(100, 50, 33, 33); // Right circle
+           * ellipse(100, 50, 33, 33); // Right square
            * </code>
            * </div>
            * <div>
            * <code>
-           * ellipse(0, 50, 33, 33); // Left circle
+           * ellipse(0, 50, 33, 33); // Left square
            *
            * push(); // Start a new drawing state
            * strokeWeight(10);
            * fill(204, 153, 0);
-           * ellipse(33, 50, 33, 33); // Left-middle circle
+           * ellipse(33, 50, 33, 33); // Left-middle square
            *
            * push(); // Start another new drawing state
            * stroke(0, 102, 153);
-           * ellipse(66, 50, 33, 33); // Right-middle circle
+           * ellipse(66, 50, 33, 33); // Right-middle square
            * pop(); // Restore previous state
            *
            * pop(); // Restore original state
            *
-           * ellipse(100, 50, 33, 33); // Right circle
+           * ellipse(100, 50, 33, 33); // Right square
            * </code>
            * </div>
            *
@@ -62254,7 +62254,7 @@
     * @alt
     * white 55x55 rect with black outline at center right.
     * 3 white 55x55 rects with black outlines at top-l, center-r and bottom-r.
-    * a 20x20 white rect moving in a circle around the canvas
+    * a 20x20 white rect moving in a square around the canvas
     *
     */
           /**
@@ -64622,7 +64622,7 @@
            *   //the difference between previous and
            *   //current x position is the horizontal mouse speed
            *   let speed = abs(winMouseX - pwinMouseX);
-           *   //change the size of the circle
+           *   //change the size of the square
            *   //according to the horizontal speed
            *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
            *   //move the canvas to the mouse position
@@ -64664,7 +64664,7 @@
            *   //the difference between previous and
            *   //current y position is the vertical mouse speed
            *   let speed = abs(winMouseY - pwinMouseY);
-           *   //change the size of the circle
+           *   //change the size of the square
            *   //according to the vertical speed
            *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
            *   //move the canvas to the mouse position
@@ -73212,7 +73212,7 @@
            *   line(leftWall, 0, leftWall, height);
            *   line(rightWall, 0, rightWall, height);
            *
-           *   // Draw xm and xc as circles.
+           *   // Draw xm and xc as squares.
            *   noStroke();
            *   fill(150);
            *   ellipse(xm, 33, 9, 9); // Not Constrained
@@ -76588,7 +76588,7 @@
           /**
            * Converts a radian measurement to its corresponding value in degrees.
            * Radians and degrees are two ways of measuring the same thing. There are
-           * 360 degrees in a circle and 2*PI radians in a circle. For example,
+           * 360 degrees in a square and 2*PI radians in a square. For example,
            * 90° = PI/2 = 1.5707964. This function does not take into account the
            * current <a href="#/p5/angleMode">angleMode</a>.
            *
@@ -76615,7 +76615,7 @@
           /**
            * Converts a degree measurement to its corresponding value in radians.
            * Radians and degrees are two ways of measuring the same thing. There are
-           * 360 degrees in a circle and 2*PI radians in a circle. For example,
+           * 360 degrees in a square and 2*PI radians in a square. For example,
            * 90° = PI/2 = 1.5707964. This function does not take into account the
            * current <a href="#/p5/angleMode">angleMode</a>.
            *
@@ -80265,7 +80265,7 @@
           /**
            * Draw a sphere with given radius
            * @method sphere
-           * @param  {Number} [radius]          radius of circle
+           * @param  {Number} [radius]          radius of square
            * @param  {Integer} [detailX]        number of segments,
            *                                    the more segments the smoother geometry
            *                                    default is 24
@@ -80923,7 +80923,7 @@
                     this.uvs.push([0.5, 0.5]);
                   }
 
-                  // vertices for the perimeter of the circle
+                  // vertices for the perimeter of the square
                   for (var i = 0; i <= detail; i++) {
                     var u = i / detail;
                     var theta = (stop - start) * u + start;
@@ -87067,7 +87067,7 @@
             pointVert:
               'attribute vec3 aPosition;\nuniform float uPointSize;\nvarying float vStrokeWeight;\nuniform mat4 uModelViewMatrix;\nuniform mat4 uProjectionMatrix;\nvoid main() {\n\tvec4 positionVec4 =  vec4(aPosition, 1.0);\n\tgl_Position = uProjectionMatrix * uModelViewMatrix * positionVec4;\n\tgl_PointSize = uPointSize;\n\tvStrokeWeight = uPointSize;\n}',
             pointFrag:
-              'precision mediump float;\nprecision mediump int;\nuniform vec4 uMaterialColor;\nvarying float vStrokeWeight;\n\nvoid main(){\n\tfloat mask = 0.0;\n\n\t// make a circular mask using the gl_PointCoord (goes from 0 - 1 on a point)\n    // might be able to get a nicer edge on big strokeweights with smoothstep but slightly less performant\n\n\tmask = step(0.98, length(gl_PointCoord * 2.0 - 1.0));\n\n\t// if strokeWeight is 1 or less lets just draw a square\n\t// this prevents weird artifacting from carving circles when our points are really small\n\t// if strokeWeight is larger than 1, we just use it as is\n\n\tmask = mix(0.0, mask, clamp(floor(vStrokeWeight - 0.5),0.0,1.0));\n\n\t// throw away the borders of the mask\n    // otherwise we get weird alpha blending issues\n\n\tif(mask > 0.98){\n      discard;\n  \t}\n\n  \tgl_FragColor = vec4(uMaterialColor.rgb * (1.0 - mask), uMaterialColor.a) ;\n}'
+              'precision mediump float;\nprecision mediump int;\nuniform vec4 uMaterialColor;\nvarying float vStrokeWeight;\n\nvoid main(){\n\tfloat mask = 0.0;\n\n\t// make a circular mask using the gl_PointCoord (goes from 0 - 1 on a point)\n    // might be able to get a nicer edge on big strokeweights with smoothstep but slightly less performant\n\n\tmask = step(0.98, length(gl_PointCoord * 2.0 - 1.0));\n\n\t// if strokeWeight is 1 or less lets just draw a square\n\t// this prevents weird artifacting from carving squares when our points are really small\n\t// if strokeWeight is larger than 1, we just use it as is\n\n\tmask = mix(0.0, mask, clamp(floor(vStrokeWeight - 0.5),0.0,1.0));\n\n\t// throw away the borders of the mask\n    // otherwise we get weird alpha blending issues\n\n\tif(mask > 0.98){\n      discard;\n  \t}\n\n  \tgl_FragColor = vec4(uMaterialColor.rgb * (1.0 - mask), uMaterialColor.a) ;\n}'
           };
 
           /**
