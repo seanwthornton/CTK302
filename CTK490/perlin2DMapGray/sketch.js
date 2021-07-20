@@ -1,4 +1,4 @@
-let tileSize = 20;
+let tileSize = 40;
 // let inc = 0.01;
 let scl = 0.1;
 
@@ -19,19 +19,31 @@ function draw() {
 
 }
 
-// color(getColor (int x, int y)) {
-//   float (v = noise(x * scl, y * scl));
-//   if (v < 0.2) {
-//     //water
-//     return color (155, 255, 255);
-//   } else if (v < 0.4) {
-//     //sand
-//     return color (30, 255, 255);
-//   } else if (v < 0.7) {
-//     //grass
-//     return color (66, 255, 255);
-//   } else {
-//     //forest
-//     return color (80, 255, 255);
+// function pickColor(i, j) {
+//   let h = noise(i * noiseScale, j * noiseScale);
+//   let c = "#facade";
+//
+//   if(h < 0.2) {
+//     c = ocean;
+//   } else if(h < 0.3) {
+//     c = shore;
+//   } else if (h < 0.4){
+//     c = sand;
+//   } else if (h < 0.5) {
+//     c = grass;
+//   } else if (h < 0.6) {
+//     c = stone;
+//   } else if (h < 0.7) {
+//     c = snow;
 //   }
+//   return color(c);
+// }
+//
+// function drawMap() {
+//   for(let i = 0; i < width; i++) {
+//     for(let j = 0; j < height; j++) {
+//       set(i, j, map[i][j])
+//     }
+//   }
+//   updatePixels();
 // }
