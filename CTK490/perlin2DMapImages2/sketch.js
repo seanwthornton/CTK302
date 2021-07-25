@@ -30,8 +30,8 @@ function setup() {
   // terrain[6] = loadImage("assets/swamp.png");
   // terrain[7] = loadImage("assets/water.png");
 
-  // createCanvas(1920, 1080);
-  createCanvas(400, 400);
+  createCanvas(1920, 1080);
+  // createCanvas(400, 400);
 
   noStroke();
   // colorMode(HSB);
